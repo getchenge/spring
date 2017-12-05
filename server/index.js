@@ -6,6 +6,7 @@ const bodyParser = require('koa-bodyparser');
 const serve = require('koa-static');
 const logger = require('koa-logger');
 const mongoose = require('mongoose');
+const favicon = require('koa-favicon');
 
 const app = new Koa();
 const server = http.createServer(app.callback());
@@ -13,6 +14,7 @@ const port = 3000;
 
 const routes = require('./routes');
 
+app.use(favicon(path.join(__dirname, '../public/favicon.ico')));
 app.use(logger());
 app.use(bodyParser());
 app.use(serve(path.join(__dirname, '../public')));
