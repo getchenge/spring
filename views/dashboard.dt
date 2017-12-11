@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/style/css/index.css" />
-  <link rel="stylesheet" href="/dist/vendor.css" />
-  <link rel="stylesheet" href="/dist/style.css" />
+  <link rel="stylesheet" href="/dist/dashboard.css" />
   <title>Dashboard Demo</title>
 </head>
 <body>

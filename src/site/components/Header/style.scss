@@ -1,12 +1,38 @@
-.header{
+.header {
   background-color: #333;
 }
-.logo{
+
+.menu{
+  line-height: 52px;
+}
+
+.logo {
   display: inline-block;
   vertical-align: middle;
   padding-left: 15px;
   margin-right: 20px;
+  background: #fff;
 }
-.nav{
+
+.logoimg {
+  width: 40px;
+  vertical-align: middle;
+}
+
+.logoname {
+  font-family: KaiTi, STKaiti;
+  writing-mode: vertical-rl;
+  letter-spacing: 0.1em;
+  vertical-align: top;
+  width: 2em;
+  color: #fff;
+  position: relative;
+  top: 8px;
+  left: 7px;
+  font-size: 16px;
+  text-shadow: -2px 0px 19px #000;
+}
+
+.nav {
   display: inline-block;
 }

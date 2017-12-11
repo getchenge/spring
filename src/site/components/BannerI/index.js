@@ -52,7 +52,6 @@ class Banner extends Component {
       }
       return (
         <div className={styles.slide} key={idx}>
-          <div style={style} className={styles.backdrop}></div>
           <img className={styles.img} src={pic.src} />
         </div>
       );

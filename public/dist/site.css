@@ -3114,5 +3114,8 @@ samp {
     padding: 0;
   }
 }
+html, body, #root {
+  height: 100%;
+  background-color: #f4f4f4; }
 
-/*# sourceMappingURL=vendor.css.map*/
+/*# sourceMappingURL=site.css.map*/

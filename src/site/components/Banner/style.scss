@@ -1,17 +1,44 @@
-.slide{
-  height: 300px!important;
-  line-height: 300px!important;
+.slide {
+  height: 400px!important;
+  line-height: 400px!important;
+  position: relative;
 }
-.prev,.next{
+
+@keyframes blur {
+  0% {
+    filter: blur(10px);
+  }
+  100% {
+    filter: blur(60px);
+  }
+}
+
+.backdrop {
+  background-size: contain!important;
+  background-repeat: no-repeat;
+  filter: blur(38px);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: blur ease-in-out 7s alternate infinite;
+}
+
+.prev,
+.next {
   display: block;
   width: 10px;
   height: 10px;
   background: red;
 }
-.img{
-  max-width:100%;
-  max-height:100%;
+
+.img {
+  max-width: 100%;
+  max-height: 100%;
   margin: 0 auto;
   user-select: none;
   -webkit-user-drag: none;
+  position: relative;
+  z-index: 100;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
-import styles from './IndexPage.css';
+import styles from './IndexPage.scss';
 import Layout from '../../components/Layout';
 import NavBar from '../../components/NavBar';
 

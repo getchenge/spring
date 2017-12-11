@@ -3,10 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Spring Media（清泉工作室）成立于一九九七年（香港），是一间提供专业影视制作服务的公司。于2006年开办上海分公司，专门从事广告音频制作、影视剧配音、音频缩混、游戏语音制作、翻译、音乐制作等。Spring Media拥有四间不同规格的专业录音棚及音控室，一流的软硬件设备及经验丰富的工作团队。暴雪游戏(守望先锋 英雄联盟 炉石传说 星际争霸 暗黑)国服配音官方合作伙伴">
+  <meta name="keyword" content="SpringMedia 清泉 清泉配音 配音培训班 配音工作室 暴雪游戏 魔兽世界 守望先锋 英雄联盟 炉石传说 星际争霸 暗黑">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" href="/style/css/index.css" />
-  <link rel="stylesheet" href="/dist/vendor.css" />
-  <link rel="stylesheet" href="/dist/style.css" />
+  <link rel="stylesheet" href="/dist/site.css" />
   {+css /}
   <title>{+title}Torch{/title}</title>
 </head>

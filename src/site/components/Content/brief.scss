@@ -1,0 +1,40 @@
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 10px auto;
+  overflow: hidden;
+  position: relative;
+  padding: 2px;
+}
+
+.img {
+  width: 120px;
+  float: left;
+  padding: 2px;
+  box-shadow: 0 0 3px rgba(#000, .3);
+}
+
+.left {}
+
+$border:#d0d0d0;
+.p {
+  width: 33em;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 130px;
+  font-family: cursive;
+  font-size: 18px;
+  border-right: 12px solid $border;
+  padding-right: 10px;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top:0;
+    right: -18px;
+    width: 3px;
+    height: 100%;
+    background: $border;
+  }
+}

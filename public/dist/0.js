@@ -18,11 +18,11 @@ var _extends2 = __webpack_require__(17);
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var _queryString = __webpack_require__(599);
+var _queryString = __webpack_require__(716);
 
 var _queryString2 = _interopRequireDefault(_queryString);
 
-var _sections = __webpack_require__(746);
+var _sections = __webpack_require__(718);
 
 var sectionsService = _interopRequireWildcard(_sections);
 
@@ -198,12 +198,12 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 599:
+/***/ 716:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var strictUriEncode = __webpack_require__(600);
+var strictUriEncode = __webpack_require__(717);
 var objectAssign = __webpack_require__(5);
 
 function encoderForArrayFormat(opts) {
@@ -411,7 +411,7 @@ exports.stringify = function (obj, opts) {
 
 /***/ }),
 
-/***/ 600:
+/***/ 717:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -425,7 +425,7 @@ module.exports = function (str) {
 
 /***/ }),
 
-/***/ 601:
+/***/ 718:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -434,18 +434,59 @@ module.exports = function (str) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var PAGE_SIZE = exports.PAGE_SIZE = 3;
+
+var _stringify = __webpack_require__(719);
+
+var _stringify2 = _interopRequireDefault(_stringify);
+
+exports.fetch = fetch;
+exports.remove = remove;
+exports.patch = patch;
+exports.create = create;
+
+var _request = __webpack_require__(721);
+
+var _request2 = _interopRequireDefault(_request);
+
+var _constants = __webpack_require__(726);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function fetch() {
+  return (0, _request2.default)('/api/sections');
+}
+
+function remove(id) {
+  return (0, _request2.default)('/api/users/' + id, {
+    method: 'DELETE'
+  });
+}
+
+function patch(values) {
+  // console.info('patch', values);
+  return (0, _request2.default)('/api/section', {
+    method: 'PATCH',
+    body: (0, _stringify2.default)(values)
+  });
+}
+
+function create(values) {
+  return (0, _request2.default)('/api/sections', {
+    method: 'POST',
+    body: (0, _stringify2.default)(values)
+  });
+}
 
 /***/ }),
 
-/***/ 717:
+/***/ 719:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(718), __esModule: true };
+module.exports = { "default": __webpack_require__(720), __esModule: true };
 
 /***/ }),
 
-/***/ 718:
+/***/ 720:
 /***/ (function(module, exports, __webpack_require__) {
 
 var core = __webpack_require__(10);
@@ -457,7 +498,7 @@ module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
 
 /***/ }),
 
-/***/ 719:
+/***/ 721:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -475,11 +516,11 @@ var _assign = __webpack_require__(227);
 
 var _assign2 = _interopRequireDefault(_assign);
 
-var _asyncToGenerator2 = __webpack_require__(720);
+var _asyncToGenerator2 = __webpack_require__(722);
 
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
-var _fetch = __webpack_require__(721);
+var _fetch = __webpack_require__(723);
 
 var _fetch2 = _interopRequireDefault(_fetch);
 
@@ -559,7 +600,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 720:
+/***/ 722:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -604,29 +645,29 @@ exports.default = function (fn) {
 
 /***/ }),
 
-/***/ 721:
+/***/ 723:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-module.exports = __webpack_require__(722);
+module.exports = __webpack_require__(724);
 
 
 /***/ }),
 
-/***/ 722:
+/***/ 724:
 /***/ (function(module, exports, __webpack_require__) {
 
 // the whatwg-fetch polyfill installs the fetch() function
 // on the global object (window or self)
 //
 // Return that as the export for use in Webpack, Browserify etc.
-__webpack_require__(723);
+__webpack_require__(725);
 module.exports = self.fetch.bind(self);
 
 
 /***/ }),
 
-/***/ 723:
+/***/ 725:
 /***/ (function(module, exports) {
 
 (function(self) {
@@ -1094,7 +1135,7 @@ module.exports = self.fetch.bind(self);
 
 /***/ }),
 
-/***/ 746:
+/***/ 726:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1103,48 +1144,7 @@ module.exports = self.fetch.bind(self);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _stringify = __webpack_require__(717);
-
-var _stringify2 = _interopRequireDefault(_stringify);
-
-exports.fetch = fetch;
-exports.remove = remove;
-exports.patch = patch;
-exports.create = create;
-
-var _request = __webpack_require__(719);
-
-var _request2 = _interopRequireDefault(_request);
-
-var _constants = __webpack_require__(601);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function fetch() {
-  return (0, _request2.default)('/api/sections');
-}
-
-function remove(id) {
-  return (0, _request2.default)('/api/users/' + id, {
-    method: 'DELETE'
-  });
-}
-
-function patch(values) {
-  // console.info('patch', values);
-  return (0, _request2.default)('/api/section', {
-    method: 'PATCH',
-    body: (0, _stringify2.default)(values)
-  });
-}
-
-function create(values) {
-  return (0, _request2.default)('/api/sections', {
-    method: 'POST',
-    body: (0, _stringify2.default)(values)
-  });
-}
+var PAGE_SIZE = exports.PAGE_SIZE = 3;
 
 /***/ })
 

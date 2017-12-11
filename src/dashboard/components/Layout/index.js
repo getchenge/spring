@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import styles from './style.css';
+import styles from './style.scss';
 import NavBar from '../../components/NavBar';
 class Layout extends Component {
   render() {

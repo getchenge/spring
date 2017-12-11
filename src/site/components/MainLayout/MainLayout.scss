@@ -1,0 +1,37 @@
+.wraper {
+  height: 100%;
+}
+
+$footerHeight:50px;
+.content {
+  min-height: 100%;
+  margin-bottom: -$footerHeight;
+}
+
+.content:after {
+  content: "";
+  display: block;
+  height: $footerHeight;
+}
+
+.footer {
+  width: 100%;
+  min-height: $footerHeight;
+}
+
+
+/* .normal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+}
+
+.main {
+  padding: 0 8px;
+  flex: 1 0 auto;
+} */

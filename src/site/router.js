@@ -11,19 +11,10 @@ function RouterConfig({ history, app }) {
     component: () => import('./routes/IndexPage'),
   });
 
-  const Users = dynamic({
-    app,
-    models: () => [
-      import('../models/users.js'),
-    ],
-    component: () => import('./routes/Users'),
-  });
-
   return (
     <Router history={history}>
       <Switch>
         <Route exact path="/" component={IndexPage} />
-        <Route exact path="/users" component={Users} />
       </Switch>
     </Router>
   );
