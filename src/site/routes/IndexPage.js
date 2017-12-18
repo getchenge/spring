@@ -14,6 +14,7 @@ function findByName(name) {
   }
 }
 function IndexPage({ location, list, loading }) {
+  console.info('IndexPage__', list);
   const navs = list && list.length > 0 && list.find(findByName('navigation')).value;
   const pix = list && list.length > 0 && list.find(findByName('slider')).value;
   const header = <Header location={location} navs={navs}></Header>;

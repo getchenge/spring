@@ -104,6 +104,7 @@ class NewSectionForm extends Component {
                 <Option value="String">字符串</Option>
                 <Option value="Select">选项</Option>
                 <Option value="Object">对象</Option>
+                <Option value="Paragraph">段落</Option>
               </Select>
             )}
           </FormItem>

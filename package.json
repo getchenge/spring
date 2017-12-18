@@ -31,7 +31,7 @@
     "mongoose": "^4.13.2"
   },
   "devDependencies": {
-    "antd": "^2.13.6",
+    "antd": "3.0.1",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-plugin-add-module-exports": "^0.2.1",

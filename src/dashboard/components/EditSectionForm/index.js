@@ -5,6 +5,7 @@ import { connect } from 'dva';
 import { message } from 'antd';
 const FormItem = Form.Item;
 const Option = Select.Option;
+const { TextArea } = Input;
 
 class editSectionForm extends Component {
   handleSubmit = (e) => {
@@ -18,9 +19,7 @@ class editSectionForm extends Component {
     const values = this.props.form.getFieldsValue();
     let { section, index } = this.props;
     section.value = Object.assign([], section.value);
-    console.info('handleSubmit', index, section);
     section.value[index || 0] = values;
-    console.info('submit_section___', section);
 
     dispatch({
       type: 'sections/patch',
@@ -48,23 +47,32 @@ class editSectionForm extends Component {
     };
     const fields = section && section.fields;
     let item;
-    // console.info('section##', section, typeof index, section && section.value[0]);
     if (index >= 0 && section && section.value) {
       item = section.value[index];
-      // console.info('edit_section_form', item, section.value, index, '##');
     }
-    // console.info('edit_form', index, item);
+    //todo switch field type
     const fieldItems = fields && fields.map((field, idx) => {
+      let tag;
+      switch (field.type) {
+        case 'String':
+          tag = getFieldDecorator(`${field.name}`, {
+            rules: [{ required: true, message: `请输入${field.caption}` }],
+            initialValue: item && item[field.name] || ''
+          })(<Input name={field.name} />);
+          break;
+        case 'Paragraph':
+          tag = getFieldDecorator(`${field.name}`, {
+            rules: [{ message: `请输入${field.caption}` }],
+            initialValue: item && item[field.name] || ''
+          })(<TextArea autosize name={field.name} />);
+      }
       return (
         <FormItem
           {...formItemLayout}
           label={field.caption}
           key={idx}
         >
-          {getFieldDecorator(`${field.name}`, {
-            rules: [{ required: true, message: `请输入${field.caption}` }],
-            initialValue: item && item[field.name] || ''
-          })(<Input name={field.name} />)}
+          {tag}
         </FormItem>
       );
     });

@@ -6,7 +6,6 @@ import { Link } from 'dva/router';
 import logo from '../../../assets/logo.png';
 
 function Header({ location, navs }) {
-  console.info('header', navs);
   const menu_nav = navs && navs.map((nav, idx) => {
     const link = nav.target ? (<Link to={nav.link} target={nav.target}>{nav.title}</Link>) : (<Link to={nav.link}>{nav.title}</Link>);
     return (
