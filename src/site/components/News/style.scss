@@ -1,0 +1,32 @@
+.news {
+  // width: 600px;
+  // margin: 0 auto;
+}
+.news-wraper {
+  background: #fff;
+  padding-top: 40px;
+}
+
+.news-content {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.news-label {
+  font-size: 22px;
+  color: #333;
+  border-left: 12px solid #d0d0d0;
+  position: relative;
+  padding-left: 10px;
+  margin-left: 10px;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -18px;
+    height: 100%;
+    width: 3px;
+    background: #d0d0d0;
+  }
+}
+

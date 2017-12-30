@@ -51,10 +51,18 @@
   top: -124px;
   padding: 3px;
   background: rgba(#fff, .7);
-  box-shadow: inset 0 0px 4px #000;
   opacity: 0;
   transform: translateY(50px);
   transition: 400ms;
+  border-radius: 2px;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    right: 44%;
+    border: 6px solid transparent;
+    border-top-color: rgba(#fff, .7);
+  }
 }
 
 .qrcode {
