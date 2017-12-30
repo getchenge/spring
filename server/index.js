@@ -10,7 +10,10 @@ const favicon = require('koa-favicon');
 
 const app = new Koa();
 const server = http.createServer(app.callback());
-const port = 3000;
+let port = 3000;
+if (process.env.NODE_ENV === 'production') {
+  port = 80;
+}
 
 const routes = require('./routes');
 
