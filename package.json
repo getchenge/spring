@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --config webpack.config.js --watch",
     "start": "pm2 start start.json",
-    "begin": "pm2 start prodution.json",
+    "begin": "pm2 start production.json",
     "init": "npm install --production --unsafe-perm"
   },
   "repository": {
