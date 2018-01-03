@@ -9,7 +9,7 @@ function IndexPage({ location, list, loading }) {
   // const navs = list.nav && list.nav.content;
   // const pix = list.sliders && list.sliders.content;
   // const left = <NavBar location={location} list={list} />;
-  const right = <div>index</div>;
+  const right = <div>选择左边模块进行内容编辑</div>;
   return (
     <Layout location={location} list={list} right={right}></Layout>
   );

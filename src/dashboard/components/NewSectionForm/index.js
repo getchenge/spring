@@ -100,7 +100,7 @@ class NewSectionForm extends Component {
             label="属性placeholder"
             hasFeedback
           >
-            {getFieldDecorator(`caption-${field}`, {
+            {getFieldDecorator(`placeholder-${field}`, {
               rules: [{ message: '请输入属性名称' }]
             })(<Input />)}
           </FormItem>

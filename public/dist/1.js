@@ -19325,7 +19325,7 @@ var NewSectionForm = function (_Component) {
               label: '\u5C5E\u6027placeholder',
               hasFeedback: true
             }),
-            getFieldDecorator('caption-' + field, {
+            getFieldDecorator('placeholder-' + field, {
               rules: [{ message: '请输入属性名称' }]
             })(_react2.default.createElement(_input2.default, null))
           ),

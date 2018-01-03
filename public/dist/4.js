@@ -581,7 +581,7 @@ function IndexPage(_ref) {
   var right = _react2.default.createElement(
     'div',
     null,
-    'index'
+    '\b\b\b\u9009\u62E9\u5DE6\u8FB9\u6A21\u5757\u8FDB\u884C\u5185\u5BB9\u7F16\u8F91'
   );
   return _react2.default.createElement(_Layout2.default, { location: location, list: list, right: right });
 }
