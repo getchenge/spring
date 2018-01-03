@@ -559,11 +559,11 @@ var _IndexPage = __webpack_require__(828);
 
 var _IndexPage2 = _interopRequireDefault(_IndexPage);
 
-var _Layout = __webpack_require__(605);
+var _Layout = __webpack_require__(606);
 
 var _Layout2 = _interopRequireDefault(_Layout);
 
-var _NavBar = __webpack_require__(568);
+var _NavBar = __webpack_require__(569);
 
 var _NavBar2 = _interopRequireDefault(_NavBar);
 
@@ -7850,7 +7850,14 @@ exports.push([module.i, "/* stylelint-disable at-rule-empty-line-before,at-rule-
 
 /***/ }),
 
-/***/ 568:
+/***/ 565:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "f9fa44faa6a505f64636b83f6cdf37e2.png";
+
+/***/ }),
+
+/***/ 569:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7890,9 +7897,13 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _style = __webpack_require__(608);
+var _style = __webpack_require__(609);
 
 var _style2 = _interopRequireDefault(_style);
+
+var _logo = __webpack_require__(565);
+
+var _logo2 = _interopRequireDefault(_logo);
 
 var _router = __webpack_require__(223);
 
@@ -7969,12 +7980,12 @@ var NavBar = function (_Component) {
           className: className
         },
         _react2.default.createElement(
-          Item,
-          { className: _style2.default.logo, key: '/dashboard/' },
+          'div',
+          { className: _style2.default.logo },
           _react2.default.createElement(
             _router.Link,
             { className: _style2.default.a, to: '/dashboard/' },
-            'Logo'
+            _react2.default.createElement('img', { src: _logo2.default, alt: '' })
           )
         ),
         menu_nav,
@@ -7998,7 +8009,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 605:
+/***/ 606:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8032,11 +8043,11 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _style = __webpack_require__(606);
+var _style = __webpack_require__(607);
 
 var _style2 = _interopRequireDefault(_style);
 
-var _NavBar = __webpack_require__(568);
+var _NavBar = __webpack_require__(569);
 
 var _NavBar2 = _interopRequireDefault(_NavBar);
 
@@ -8080,13 +8091,13 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 606:
+/***/ 607:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(607);
+var content = __webpack_require__(608);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -8112,7 +8123,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 607:
+/***/ 608:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(477)(undefined);
@@ -8131,13 +8142,13 @@ exports.locals = {
 
 /***/ }),
 
-/***/ 608:
+/***/ 609:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(609);
+var content = __webpack_require__(610);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -8163,7 +8174,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 609:
+/***/ 610:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(477)(undefined);
@@ -8171,7 +8182,7 @@ exports = module.exports = __webpack_require__(477)(undefined);
 
 
 // module
-exports.push([module.i, "._249Z3JCHciGW29Zo38-CMN {\n  display: block;\n  font-size: 30px !important;\n  width: 100%;\n  color: #eee;\n  text-align: center;\n  padding: 15px !important;\n  height: auto !important; }\n\n._1iQ-SWLUHrkl6m8WayKLYl {\n  display: block;\n  width: 100%;\n  padding: 0 !important;\n  text-align: center; }\n\n._2Ts02CnKCU1AmMbO8c9S6E {\n  text-align: center; }\n\n._3qvogWiQoMClclHOeC-2g1 {\n  text-align: center;\n  font-size: 30px; }\n", ""]);
+exports.push([module.i, "._249Z3JCHciGW29Zo38-CMN {\n  display: block;\n  font-size: 30px !important;\n  width: 100%;\n  color: #eee;\n  background: #ccc;\n  text-align: center;\n  padding: 15px !important;\n  height: auto !important; }\n\n._1iQ-SWLUHrkl6m8WayKLYl {\n  display: block;\n  width: 100%;\n  padding: 0 !important;\n  text-align: center; }\n\n._2Ts02CnKCU1AmMbO8c9S6E {\n  text-align: center; }\n\n._3qvogWiQoMClclHOeC-2g1 {\n  text-align: center;\n  font-size: 30px; }\n", ""]);
 
 // exports
 exports.locals = {

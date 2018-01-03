@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const db = mongoose.createConnection('mongodb://127.0.0.1/torch', { promiseLibrary: Promise });
 
-const fieldSchema = new Schema({ caption: String, name: String, type: String, value: Schema.Types.Mixed });
+const fieldSchema = new Schema({ caption: String, name: String, type: String, placeholder: String, value: Schema.Types.Mixed });
 const sectionSchema = new Schema({
   caption: String,
   name: String,

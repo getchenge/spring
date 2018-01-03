@@ -97,6 +97,15 @@ class NewSectionForm extends Component {
           </FormItem>
           <FormItem
             {...formItemLayout}
+            label="属性placeholder"
+            hasFeedback
+          >
+            {getFieldDecorator(`caption-${field}`, {
+              rules: [{ message: '请输入属性名称' }]
+            })(<Input />)}
+          </FormItem>
+          <FormItem
+            {...formItemLayout}
             label="属性类型"
           >
             {getFieldDecorator(`type-${field}`, { initialValue: 'String' })(

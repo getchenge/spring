@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './style.scss';
 import { Menu, Icon } from 'antd';
+import logo from '../../../assets/logo.png';
 // import { Button } from 'material-ui/Button';
 import { Link } from 'dva/router';
 const { Item, SubMenu } = Menu;
@@ -43,9 +44,9 @@ class NavBar extends Component {
         theme="dark"
         className={className}
       >
-        <Item className={styles.logo} key="/dashboard/">
-          <Link className={styles.a} to="/dashboard/">Logo</Link>
-        </Item>
+        <div className={styles.logo}>
+          <Link className={styles.a} to="/dashboard/"><img src={logo} alt="" /></Link>
+        </div>
         {menu_nav}
         <Item className={styles.item} key="/dashboard/add">
           <Link className={styles.aplus} to="/dashboard/add">+</Link>
