@@ -15,10 +15,17 @@ function findByName(name) {
     return item.name === name;
   }
 }
+function getProperty(obj, key) {
+  if (!obj) return;
+  if (obj instanceof Array) {
+    return obj.find(findByName(key)) || {};
+  }
+  return obj[key] || '';
+}
 function IndexPage({ location, list, loading }) {
-  const navs = list && list.length > 0 && list.find(findByName('navigation')).value;
-  const pix = list && list.length > 0 && list.find(findByName('slider')).value;
-  const news = list && list.length > 0 && list.find(findByName('news')).value;
+  const navs = getProperty(list, 'navigation').value;
+  const pix = getProperty(list, 'slider').value;
+  const news = getProperty(list, 'news').value;
   const header = <Header location={location} navs={navs}></Header>;
   const footer = <Footer />;
 

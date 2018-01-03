@@ -707,14 +707,21 @@ function findByName(name) {
     return item.name === name;
   };
 }
+function getProperty(obj, key) {
+  if (!obj) return;
+  if (obj instanceof Array) {
+    return obj.find(findByName(key)) || {};
+  }
+  return obj[key] || '';
+}
 function IndexPage(_ref) {
   var location = _ref.location,
       list = _ref.list,
       loading = _ref.loading;
 
-  var navs = list && list.length > 0 && list.find(findByName('navigation')).value;
-  var pix = list && list.length > 0 && list.find(findByName('slider')).value;
-  var news = list && list.length > 0 && list.find(findByName('news')).value;
+  var navs = getProperty(list, 'navigation').value;
+  var pix = getProperty(list, 'slider').value;
+  var news = getProperty(list, 'news').value;
   var header = _react2.default.createElement(_Header2.default, { location: location, navs: navs });
   var footer = _react2.default.createElement(_Footer2.default, null);
 
