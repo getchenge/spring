@@ -58,7 +58,7 @@ class editSectionForm extends Component {
           tag = getFieldDecorator(`${field.name}`, {
             rules: [{ required: true, message: `请输入${field.caption}` }],
             initialValue: item && item[field.name] || ''
-          })(<Input name={field.name} />);
+          })(<Input name={field.name} placeholder={field.placeholder} />);
           break;
         case 'Paragraph':
           tag = getFieldDecorator(`${field.name}`, {

@@ -19264,7 +19264,7 @@ var editSectionForm = function (_Component) {
             tag = getFieldDecorator('' + field.name, {
               rules: [{ required: true, message: '\u8BF7\u8F93\u5165' + field.caption }],
               initialValue: item && item[field.name] || ''
-            })(_react2.default.createElement(_input2.default, { name: field.name }));
+            })(_react2.default.createElement(_input2.default, { name: field.name, placeholder: field.placeholder }));
             break;
           case 'Paragraph':
             tag = getFieldDecorator('' + field.name, {
