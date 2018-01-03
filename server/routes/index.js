@@ -17,6 +17,7 @@ router.post('/api/sections', (ctx, next) => {
       caption: section[`caption-${i}`],
       name: section[`name-${i}`],
       type: section[`type-${i}`],
+      placeholder: section[`placeholder-${i}`],
       value: ''
     };
     new_section.fields.push(field);
