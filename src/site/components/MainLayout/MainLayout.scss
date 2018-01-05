@@ -19,6 +19,10 @@ $footerHeight:50px;
   min-height: $footerHeight;
 }
 
+.building{
+  filter:blur(10px) grayscale(80%);
+}
+
 
 /* .normal {
   display: flex;

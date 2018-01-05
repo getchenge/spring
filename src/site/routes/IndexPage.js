@@ -23,6 +23,11 @@ function getProperty(obj, key) {
   return obj[key] || '';
 }
 function IndexPage({ location, list, loading }) {
+  let isBuilding = true;
+  if (location.search && location.search.indexOf('preview=1') !== -1) {
+    isBuilding = false;
+  }
+  console.info('location.search', location.search, ' isBuilding', isBuilding);
   const navs = getProperty(list, 'navigation').value;
   const pix = getProperty(list, 'slider').value;
   const news = getProperty(list, 'news').value;
@@ -30,7 +35,7 @@ function IndexPage({ location, list, loading }) {
   const footer = <Footer />;
 
   return (
-    <MainLayout header={header} footer={footer}>
+    <MainLayout header={header} footer={footer} isBuilding={isBuilding}>
       <Banner pix={pix} loading={loading} />
       <News list={news} />
       <div className={styles.wraper}>
