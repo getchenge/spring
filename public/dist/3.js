@@ -13168,8 +13168,6 @@ var _style2 = _interopRequireDefault(_style);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import pic from '../../../assets/tetris.gif';
-
 var Building = function (_Component) {
   (0, _inherits3.default)(Building, _Component);
 
@@ -13242,7 +13240,7 @@ exports = module.exports = __webpack_require__(477)(undefined);
 
 
 // module
-exports.push([module.i, "._2XYlNZJetRnHwm-_zSQeSE {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  z-index: 1000;\n  background: rgba(0, 0, 0, 0.3); }\n\n.TdRcG-Fq4NwADZnx1z_Xv {\n  width: 400px;\n  height: 300px;\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  -webkit-transform: translate3d(-50%, -50%, 0);\n  transform: translate3d(-50%, -50%, 0);\n  background-image: url(" + __webpack_require__(748) + ");\n  background-size: contain;\n  background-position: 50%;\n  border-radius: 10px;\n  outline: 10px solid rgba(255, 255, 255, 0.6);\n  outline-offset: -18px; }\n\n._2toTd8i-HO5T_m0UcbRUi4 {\n  position: absolute;\n  bottom: 20px;\n  text-align: center;\n  width: 100%; }\n", ""]);
+exports.push([module.i, "._2XYlNZJetRnHwm-_zSQeSE {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  z-index: 1000;\n  background: rgba(0, 0, 0, 0.3); }\n\n.TdRcG-Fq4NwADZnx1z_Xv {\n  width: 400px;\n  height: 300px;\n  position: absolute;\n  left: 50%;\n  top: 40%;\n  -webkit-transform: translate3d(-50%, -50%, 0);\n  transform: translate3d(-50%, -50%, 0);\n  background-image: url(" + __webpack_require__(748) + ");\n  background-size: contain;\n  background-position: 50%;\n  border-radius: 10px;\n  outline: 10px solid rgba(255, 255, 255, 0.6);\n  outline-offset: -18px; }\n\n._2toTd8i-HO5T_m0UcbRUi4 {\n  position: absolute;\n  bottom: 20px;\n  text-align: center;\n  width: 100%; }\n", ""]);
 
 // exports
 exports.locals = {
@@ -15675,6 +15673,15 @@ var Footer = function (_Component) {
           'Copyright \xA9 1997-',
           y,
           ' Spring Media Ltd. All Rights Reserved.'
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: _style2.default.copyright },
+          _react2.default.createElement(
+            'a',
+            { href: 'http://www.miibeian.gov.cn/' },
+            '\u6CAAICP\u590716047667\u53F7'
+          )
         )
       );
     }
@@ -15725,7 +15732,7 @@ exports = module.exports = __webpack_require__(477)(undefined);
 
 
 // module
-exports.push([module.i, "._1Lkfxjvi0bNWMgaUqglmto {\n  width: 100%;\n  min-height: 50px;\n  padding: 1.8em 2em 0 2em;\n  background: rgba(0, 0, 0, 0.8);\n  color: #fafafa;\n  position: relative; }\n\n._3d72H7tK_BftER0XBVl_jw {\n  padding-bottom: 10px;\n  width: 960px;\n  margin: 0 auto; }\n\n._20nika0805fynjTqBCjP0c {\n  width: 960px;\n  margin: 0 auto;\n  text-align: right;\n  position: relative; }\n\n._2gvsGjxcBtt9cu6hU05nwS,\n._30dOnxXSfrF9mAoHIfmPwe {\n  color: #aaa;\n  font-size: 20px;\n  margin-right: 12px;\n  z-index: 2;\n  position: relative;\n  vertical-align: middle; }\n\n._2gvsGjxcBtt9cu6hU05nwS:hover, ._2gvsGjxcBtt9cu6hU05nwS._2625rBPIfvFjNGK3RM8P83 {\n  color: #609700; }\n\n._30dOnxXSfrF9mAoHIfmPwe:hover {\n  color: #EA4225; }\n\n.rhKE1lWJO6Z78kQx1nGQp {\n  width: 120px;\n  height: 120px;\n  position: absolute;\n  right: 0px;\n  top: -124px;\n  padding: 3px;\n  background: rgba(255, 255, 255, 0.7);\n  opacity: 0;\n  -webkit-transform: translateY(50px);\n  transform: translateY(50px);\n  transition: 400ms;\n  border-radius: 2px; }\n  .rhKE1lWJO6Z78kQx1nGQp:after {\n    content: '';\n    position: absolute;\n    bottom: -12px;\n    right: 44%;\n    border: 6px solid transparent;\n    border-top-color: rgba(255, 255, 255, 0.7); }\n\n._1jbsC8dkrWRfvzMRH_c35c {\n  width: 100%; }\n\n._1PbMFvqTNpLJGpJ1SE6pGD {\n  opacity: 1;\n  -webkit-transform: translateY(0px);\n  transform: translateY(0px); }\n\n._1NoHkmbF4iAlMWYdYKanrE {\n  color: rgba(255, 255, 255, 0.7);\n  margin-right: 1em; }\n", ""]);
+exports.push([module.i, "._1Lkfxjvi0bNWMgaUqglmto {\n  width: 100%;\n  min-height: 50px;\n  padding: 1.8em 2em 0 2em;\n  background: rgba(0, 0, 0, 0.8);\n  color: #fafafa;\n  position: relative; }\n\n._3d72H7tK_BftER0XBVl_jw {\n  padding-bottom: 10px;\n  width: 960px;\n  margin: 0 auto;\n  text-align: center; }\n\n._20nika0805fynjTqBCjP0c {\n  width: 960px;\n  margin: 0 auto;\n  text-align: right;\n  position: relative; }\n\n._2gvsGjxcBtt9cu6hU05nwS,\n._30dOnxXSfrF9mAoHIfmPwe {\n  color: #aaa;\n  font-size: 20px;\n  margin-right: 12px;\n  z-index: 2;\n  position: relative;\n  vertical-align: middle; }\n\n._2gvsGjxcBtt9cu6hU05nwS:hover, ._2gvsGjxcBtt9cu6hU05nwS._2625rBPIfvFjNGK3RM8P83 {\n  color: #609700; }\n\n._30dOnxXSfrF9mAoHIfmPwe:hover {\n  color: #EA4225; }\n\n.rhKE1lWJO6Z78kQx1nGQp {\n  width: 120px;\n  height: 120px;\n  position: absolute;\n  right: 0px;\n  top: -124px;\n  padding: 3px;\n  background: rgba(255, 255, 255, 0.7);\n  opacity: 0;\n  -webkit-transform: translateY(50px);\n  transform: translateY(50px);\n  transition: 400ms;\n  border-radius: 2px; }\n  .rhKE1lWJO6Z78kQx1nGQp:after {\n    content: '';\n    position: absolute;\n    bottom: -12px;\n    right: 44%;\n    border: 6px solid transparent;\n    border-top-color: rgba(255, 255, 255, 0.7); }\n\n._1jbsC8dkrWRfvzMRH_c35c {\n  width: 100%; }\n\n._1PbMFvqTNpLJGpJ1SE6pGD {\n  opacity: 1;\n  -webkit-transform: translateY(0px);\n  transform: translateY(0px); }\n\n._1NoHkmbF4iAlMWYdYKanrE {\n  color: rgba(255, 255, 255, 0.7);\n  margin-right: 1em; }\n", ""]);
 
 // exports
 exports.locals = {

@@ -33,6 +33,7 @@ class Footer extends Component {
           <a href="https://weibo.com/springmedia" className={styles.weibo} target="_blank"><Icon type="weibo" /></a>
         </div>
         <p className={styles.copyright}>Copyright © 1997-{y} Spring Media Ltd. All Rights Reserved.</p>
+        <p className={styles.copyright}><a href="http://www.miibeian.gov.cn/">沪ICP备16047667号</a></p>
       </div>
     );
   }
