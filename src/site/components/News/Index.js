@@ -8,7 +8,7 @@ class News extends Component {
   render() {
     const { list } = this.props;
     return (
-      <div className={styles['news-wraper']}>
+      <div className={styles['news-wraper']} id="news">
         <div className={styles['news-content']}>
           <div className={styles['news-label']}>最新动态</div>
           <List

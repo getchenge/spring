@@ -15544,7 +15544,7 @@ exports = module.exports = __webpack_require__(477)(undefined);
 
 
 // module
-exports.push([module.i, "._3iz92yTtuTQ5B6wHGryelz {\n  background-color: #333; }\n\n._35Qf8F85iV1irWKRxd0L86 {\n  line-height: 52px; }\n\n._1FK1OiPnCLsO0I-RaGywCS {\n  display: inline-block;\n  vertical-align: middle;\n  padding-left: 15px;\n  margin-right: 20px;\n  background: #fff; }\n\n.Pw7HtAd6E3U4m4KUmODCD {\n  width: 40px;\n  vertical-align: middle; }\n\n._1d7SV--rHhhkUlzEjeq8vF {\n  font-family: KaiTi, STKaiti;\n  -webkit-writing-mode: vertical-rl;\n  -ms-writing-mode: tb-rl;\n  writing-mode: vertical-rl;\n  letter-spacing: 0.1em;\n  vertical-align: top;\n  width: 2em;\n  color: #fff;\n  position: relative;\n  top: 8px;\n  left: 7px;\n  font-size: 16px;\n  text-shadow: -2px 0px 19px #000; }\n\n.tH3GydXJIR98epmf4d1oc {\n  display: inline-block; }\n", ""]);
+exports.push([module.i, "._3iz92yTtuTQ5B6wHGryelz {\n  background-color: #333; }\n\n._35Qf8F85iV1irWKRxd0L86 {\n  line-height: 52px; }\n\n._1FK1OiPnCLsO0I-RaGywCS {\n  display: inline-block;\n  vertical-align: middle;\n  padding-left: 15px;\n  margin-right: 20px;\n  background: #fff; }\n\n.Pw7HtAd6E3U4m4KUmODCD {\n  width: 40px;\n  vertical-align: middle; }\n\n._1d7SV--rHhhkUlzEjeq8vF {\n  font-family: KaiTi, STKaiti;\n  -webkit-writing-mode: vertical-rl;\n  -ms-writing-mode: tb-rl;\n  writing-mode: vertical-rl;\n  letter-spacing: 0.1em;\n  vertical-align: top;\n  width: 2em;\n  position: relative;\n  top: 8px;\n  left: 7px;\n  font-size: 16px;\n  color: #000; }\n\n.tH3GydXJIR98epmf4d1oc {\n  display: inline-block; }\n", ""]);
 
 // exports
 exports.locals = {
