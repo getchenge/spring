@@ -21,9 +21,9 @@ function Header({ location, navs }) {
       theme="dark"
       className={styles.menu}
     >
-      <Menu.Item key="/index" className={styles.logo}>
+      <div key="/index" className={styles.logo}>
         <Link to="/"><img className={styles.logoimg} src={logo} /><span className={styles.logoname}>清泉</span></Link>
-      </Menu.Item>
+      </div>
       {menu_nav}
     </Menu>
   );

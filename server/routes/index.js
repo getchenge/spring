@@ -37,7 +37,7 @@ router.get('/dashboard/*', (ctx, next) => {
   return ctx.render('dashboard');
 });
 router.get('*', function (ctx, next) {
-  return ctx.render('index');
+  return ctx.render('index',{title:'清泉配音工作室'});
 });
 
 module.exports = router;

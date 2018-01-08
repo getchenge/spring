@@ -2,16 +2,16 @@
   background-color: #333;
 }
 
-.menu{
+.menu {
   line-height: 52px;
 }
 
 .logo {
-  display: inline-block;
   vertical-align: middle;
   padding-left: 15px;
   margin-right: 20px;
   background: #fff;
+  float: left;
 }
 
 .logoimg {
@@ -29,8 +29,7 @@
   top: 8px;
   left: 7px;
   font-size: 16px;
-  color: #000;
-  // color: #fff;
+  color: #000; // color: #fff;
   // text-shadow: -2px 0px 19px #000;
 }
 

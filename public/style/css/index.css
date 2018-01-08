@@ -9,6 +9,14 @@
 .ant-carousel .slick-slide h3 {
   color: #fff;
 }
-.anticon{
+
+.anticon {
   padding: 0 1px;
+}
+
+.ant-menu-dark.ant-menu-horizontal {
+
+}
+.ant-menu-dark, .ant-menu-dark .ant-menu-sub{
+  background: #333!important;
 }

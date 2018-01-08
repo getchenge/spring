@@ -3,7 +3,10 @@ import styles from './MainLayout.scss';
 import Building from '../Building';
 
 function MainLayout({ header, children, footer, location, isBuilding }) {
-  const building = isBuilding ? (<Building></Building>) : '';
+  // const building = isBuilding ? (<Building></Building>) : '';
+  const building = '';
+  isBuilding = false;
+  
   return (
     <div className={styles.wraper}>
       <div className={`${styles.content} ${isBuilding ? styles.building : ''}`}>
