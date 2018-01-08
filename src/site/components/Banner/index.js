@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './style.scss';
-import { Carousel as Slider } from 'antd';
+import { Carousel as Slider, Icon } from 'antd';
 
 
 function SampleNextArrow(props) {
@@ -28,6 +28,18 @@ function SamplePrevArrow(props) {
 }
 
 class Banner extends Component {
+  constructor(props) {
+    super(props)
+    this.next = this.next.bind(this)
+    this.previous = this.previous.bind(this)
+  }
+  next() {
+    console.info('Slider__', this.slider);
+    this.slider.innerSlider.slickNext()
+  }
+  previous() {
+    this.slider.innerSlider.slickPrev()
+  }
   render() {
     const { pix, loading } = this.props;
     const settings = {
@@ -59,10 +71,14 @@ class Banner extends Component {
     });
     const loading_pane = loading ? (<div className={styles.slide}><h3>loading</h3></div>) : '';
     return (
-      <Slider {...settings}>
-        {slides}
-        {loading_pane}
-      </Slider>
+      <div className={styles.container}>
+        <Slider {...settings} ref={c => this.slider = c}>
+          {slides}
+          {loading_pane}
+        </Slider>
+        <div className={styles.prev} onClick={this.previous}><Icon type="left" /></div>
+        <div className={styles.next} onClick={this.next}><Icon type="right" /></div>
+      </div>
     );
   }
 }

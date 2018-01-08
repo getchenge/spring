@@ -13918,9 +13918,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _icon = __webpack_require__(220);
+
+var _icon2 = _interopRequireDefault(_icon);
+
 var _carousel = __webpack_require__(750);
 
 var _carousel2 = _interopRequireDefault(_carousel);
+
+var _extends2 = __webpack_require__(17);
+
+var _extends3 = _interopRequireDefault(_extends2);
 
 var _getPrototypeOf = __webpack_require__(496);
 
@@ -13945,6 +13953,8 @@ var _inherits3 = _interopRequireDefault(_inherits2);
 var _assign = __webpack_require__(228);
 
 var _assign2 = _interopRequireDefault(_assign);
+
+__webpack_require__(627);
 
 __webpack_require__(763);
 
@@ -13987,14 +13997,32 @@ function SamplePrevArrow(props) {
 var Banner = function (_Component) {
   (0, _inherits3.default)(Banner, _Component);
 
-  function Banner() {
+  function Banner(props) {
     (0, _classCallCheck3.default)(this, Banner);
-    return (0, _possibleConstructorReturn3.default)(this, (Banner.__proto__ || (0, _getPrototypeOf2.default)(Banner)).apply(this, arguments));
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (Banner.__proto__ || (0, _getPrototypeOf2.default)(Banner)).call(this, props));
+
+    _this.next = _this.next.bind(_this);
+    _this.previous = _this.previous.bind(_this);
+    return _this;
   }
 
   (0, _createClass3.default)(Banner, [{
+    key: 'next',
+    value: function next() {
+      console.info('Slider__', this.slider);
+      this.slider.innerSlider.slickNext();
+    }
+  }, {
+    key: 'previous',
+    value: function previous() {
+      this.slider.innerSlider.slickPrev();
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var _props = this.props,
           pix = _props.pix,
           loading = _props.loading;
@@ -14036,10 +14064,26 @@ var Banner = function (_Component) {
         )
       ) : '';
       return _react2.default.createElement(
-        _carousel2.default,
-        settings,
-        slides,
-        loading_pane
+        'div',
+        { className: _style2.default.container },
+        _react2.default.createElement(
+          _carousel2.default,
+          (0, _extends3.default)({}, settings, { ref: function ref(c) {
+              return _this2.slider = c;
+            } }),
+          slides,
+          loading_pane
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: _style2.default.prev, onClick: this.previous },
+          _react2.default.createElement(_icon2.default, { type: 'left' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: _style2.default.next, onClick: this.next },
+          _react2.default.createElement(_icon2.default, { type: 'right' })
+        )
       );
     }
   }]);
@@ -16059,12 +16103,13 @@ exports = module.exports = __webpack_require__(477)(undefined);
 
 
 // module
-exports.push([module.i, ".NlEmXmIn2Fs1wsiojhytX {\n  height: 400px !important;\n  line-height: 400px !important;\n  position: relative; }\n\n@-webkit-keyframes y8srTvuALirDAzFKSBOXj {\n  0% {\n    -webkit-filter: blur(10px);\n    filter: blur(10px); }\n  100% {\n    -webkit-filter: blur(60px);\n    filter: blur(60px); } }\n\n@keyframes y8srTvuALirDAzFKSBOXj {\n  0% {\n    -webkit-filter: blur(10px);\n    filter: blur(10px); }\n  100% {\n    -webkit-filter: blur(60px);\n    filter: blur(60px); } }\n\n._3YQYj9bZwGJ5OMYbyZDrXn {\n  background-size: contain !important;\n  background-repeat: no-repeat;\n  -webkit-filter: blur(38px);\n  filter: blur(38px);\n  height: 100%;\n  width: 100%;\n  position: absolute;\n  left: 0;\n  top: 0; }\n\n.ORQy4MP1Ritato402Kxgp,\n.yhQKfhndMzjKbxtYRnkbi {\n  display: block;\n  width: 10px;\n  height: 10px;\n  background: red; }\n\n._2MIGdBmIm3hTVs58ecw0E7 {\n  max-width: 100%;\n  max-height: 100%;\n  margin: 0 auto;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-user-drag: none;\n  position: relative;\n  z-index: 100; }\n", ""]);
+exports.push([module.i, ".NlEmXmIn2Fs1wsiojhytX {\n  height: 400px !important;\n  line-height: 400px !important;\n  position: relative; }\n\n@-webkit-keyframes y8srTvuALirDAzFKSBOXj {\n  0% {\n    -webkit-filter: blur(10px);\n    filter: blur(10px); }\n  100% {\n    -webkit-filter: blur(60px);\n    filter: blur(60px); } }\n\n@keyframes y8srTvuALirDAzFKSBOXj {\n  0% {\n    -webkit-filter: blur(10px);\n    filter: blur(10px); }\n  100% {\n    -webkit-filter: blur(60px);\n    filter: blur(60px); } }\n\n._3YQYj9bZwGJ5OMYbyZDrXn {\n  background-size: contain !important;\n  background-repeat: no-repeat;\n  -webkit-filter: blur(38px);\n  filter: blur(38px);\n  height: 100%;\n  width: 100%;\n  position: absolute;\n  left: 0;\n  top: 0; }\n\n.zw1H4AHNmTclzAxlAtyeR {\n  position: relative; }\n\n.ORQy4MP1Ritato402Kxgp,\n.yhQKfhndMzjKbxtYRnkbi {\n  position: absolute;\n  top: 50%;\n  width: 80px;\n  height: 80px;\n  line-height: 80px;\n  text-align: center;\n  background: rgba(0, 0, 0, 0.3);\n  color: #fff;\n  font-size: 40px;\n  -webkit-transform: translateY(-50%);\n  transform: translateY(-50%);\n  cursor: pointer;\n  border-radius: 6px; }\n\n.ORQy4MP1Ritato402Kxgp {\n  left: 40px; }\n\n.yhQKfhndMzjKbxtYRnkbi {\n  right: 40px; }\n\n._2MIGdBmIm3hTVs58ecw0E7 {\n  max-width: 100%;\n  max-height: 100%;\n  margin: 0 auto;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-user-drag: none;\n  position: relative;\n  z-index: 100; }\n", ""]);
 
 // exports
 exports.locals = {
 	"slide": "NlEmXmIn2Fs1wsiojhytX",
 	"backdrop": "_3YQYj9bZwGJ5OMYbyZDrXn",
+	"container": "zw1H4AHNmTclzAxlAtyeR",
 	"prev": "ORQy4MP1Ritato402Kxgp",
 	"next": "yhQKfhndMzjKbxtYRnkbi",
 	"img": "_2MIGdBmIm3hTVs58ecw0E7",

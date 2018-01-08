@@ -21,16 +21,33 @@
   width: 100%;
   position: absolute;
   left: 0;
-  top: 0;
-  // animation: blur ease-in-out 7s alternate infinite;
+  top: 0; // animation: blur ease-in-out 7s alternate infinite;
+}
+
+.container {
+  position: relative;
 }
 
 .prev,
 .next {
-  display: block;
-  width: 10px;
-  height: 10px;
-  background: red;
+  position: absolute;
+  top: 50%;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  background: rgba(#000, .3);
+  color: #fff;
+  font-size: 40px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border-radius: 6px;
+}
+.prev{
+  left:40px;
+}
+.next{
+  right:40px;
 }
 
 .img {
