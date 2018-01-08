@@ -40318,7 +40318,30 @@ function RouterConfig(_ref) {
 
   return _react2.default.createElement(
     _router.Router,
-    { history: history },
+    { history: history, onUpdate: function onUpdate() {
+        return window.scrollTo(0, 0);
+      }, scrollBehavior: {
+        /**
+         * Sets the behaviour for scrolling when changing state.
+         * If there is a second hash in the url, scroll to the element with matching identifier.
+         * Otherwise scroll to the top.
+         * @override
+         */
+        updateScrollPosition: function updateScrollPosition() {
+          console.log('hi');
+          window.location.hash = window.decodeURIComponent(window.location.hash);
+          var hashParts = window.location.hash.split('#');
+          if (hashParts.length > 2) {
+            var hash = hashParts.slice(-1)[0];
+            var element = document.querySelector('#' + hash);
+            if (element) {
+              element.scrollIntoView();
+            }
+          } else {
+            window.scrollTo(0, 0);
+          }
+        }
+      } },
     _react2.default.createElement(
       _router.Switch,
       null,
