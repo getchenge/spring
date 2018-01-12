@@ -18,7 +18,7 @@ class NavBar extends Component {
           const link = `/dashboard/${nav.name}?index=${idx}`;
           return (
             <Item className={styles.item} data-key={link} key={link}>
-              <Link className={styles.a} to={link}>{item.caption || item.title || idx + 1}</Link>
+              <Link className={`${styles.a} ${styles['sub-item']}`} to={link}>{item.caption || item.title || idx + 1}</Link>
             </Item>
           );
         });
@@ -26,7 +26,7 @@ class NavBar extends Component {
           <SubMenu className={styles.item} title={nav.caption} key={nav.name}>
             {subItems}
             <Item className={styles.item} key={newLink}>
-              <Link className={styles.a} to={newLink}>+</Link>
+              <Link className={`${styles.a} ${styles['sub-item']}`} to={newLink}>+</Link>
             </Item>
           </SubMenu>
         );

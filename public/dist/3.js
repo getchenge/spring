@@ -700,6 +700,10 @@ var _Partner = __webpack_require__(806);
 
 var _Partner2 = _interopRequireDefault(_Partner);
 
+var _Dubbers = __webpack_require__(852);
+
+var _Dubbers2 = _interopRequireDefault(_Dubbers);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function findByName(name) {
@@ -727,6 +731,7 @@ function IndexPage(_ref) {
   var navs = getProperty(list, 'navigation').value;
   var pix = getProperty(list, 'slider').value;
   var news = getProperty(list, 'news').value;
+  var dubbers = getProperty(list, 'dubbers').value;
   var header = _react2.default.createElement(_Header2.default, { location: location, navs: navs });
   var footer = _react2.default.createElement(_Footer2.default, null);
 
@@ -735,6 +740,7 @@ function IndexPage(_ref) {
     { header: header, footer: footer, isBuilding: isBuilding },
     _react2.default.createElement(_Banner2.default, { pix: pix, loading: loading }),
     _react2.default.createElement(_News2.default, { list: news }),
+    _react2.default.createElement(_Dubbers2.default, { list: dubbers }),
     _react2.default.createElement(
       'div',
       { className: _IndexPage2.default.wraper },
@@ -8483,10 +8489,10 @@ if(false) {
 
 var _assign = __webpack_require__(5);
 
-var ReactCurrentOwner = __webpack_require__(625);
+var ReactCurrentOwner = __webpack_require__(626);
 
 var warning = __webpack_require__(2);
-var canDefineProperty = __webpack_require__(624);
+var canDefineProperty = __webpack_require__(625);
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
 var REACT_ELEMENT_TYPE = __webpack_require__(726);
@@ -11803,6 +11809,15 @@ exports.push([module.i, "/* stylelint-disable at-rule-empty-line-before,at-rule-
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+__webpack_require__(216);
+
+/***/ }),
+/* 625 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -11829,7 +11844,7 @@ module.exports = canDefineProperty;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 625 */
+/* 626 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11861,7 +11876,7 @@ var ReactCurrentOwner = {
 module.exports = ReactCurrentOwner;
 
 /***/ }),
-/* 626 */
+/* 627 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12236,15 +12251,6 @@ var helpers = {
 exports.default = helpers;
 
 /***/ }),
-/* 627 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(216);
-
-/***/ }),
 /* 628 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12331,7 +12337,7 @@ module.exports = lowPriorityWarning;
 
 var _prodInvariant = __webpack_require__(586);
 
-var ReactCurrentOwner = __webpack_require__(625);
+var ReactCurrentOwner = __webpack_require__(626);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -13056,7 +13062,7 @@ var _prodInvariant = __webpack_require__(586),
 
 var ReactNoopUpdateQueue = __webpack_require__(725);
 
-var canDefineProperty = __webpack_require__(624);
+var canDefineProperty = __webpack_require__(625);
 var emptyObject = __webpack_require__(65);
 var invariant = __webpack_require__(1);
 var lowPriorityWarning = __webpack_require__(628);
@@ -13371,13 +13377,13 @@ module.exports = getIteratorFn;
 
 
 
-var ReactCurrentOwner = __webpack_require__(625);
+var ReactCurrentOwner = __webpack_require__(626);
 var ReactComponentTreeHook = __webpack_require__(629);
 var ReactElement = __webpack_require__(568);
 
 var checkReactTypeSpec = __webpack_require__(814);
 
-var canDefineProperty = __webpack_require__(624);
+var canDefineProperty = __webpack_require__(625);
 var getIteratorFn = __webpack_require__(727);
 var warning = __webpack_require__(2);
 var lowPriorityWarning = __webpack_require__(628);
@@ -13954,7 +13960,7 @@ var _assign = __webpack_require__(228);
 
 var _assign2 = _interopRequireDefault(_assign);
 
-__webpack_require__(627);
+__webpack_require__(624);
 
 __webpack_require__(763);
 
@@ -14823,7 +14829,7 @@ var _eventHandlers = __webpack_require__(755);
 
 var _eventHandlers2 = _interopRequireDefault(_eventHandlers);
 
-var _helpers = __webpack_require__(626);
+var _helpers = __webpack_require__(627);
 
 var _helpers2 = _interopRequireDefault(_helpers);
 
@@ -15103,7 +15109,7 @@ exports.__esModule = true;
 
 var _trackHelper = __webpack_require__(721);
 
-var _helpers = __webpack_require__(626);
+var _helpers = __webpack_require__(627);
 
 var _helpers2 = _interopRequireDefault(_helpers);
 
@@ -15805,7 +15811,7 @@ var _classnames = __webpack_require__(84);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _helpers = __webpack_require__(626);
+var _helpers = __webpack_require__(627);
 
 var _helpers2 = _interopRequireDefault(_helpers);
 
@@ -16288,7 +16294,7 @@ var _inherits2 = __webpack_require__(62);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-__webpack_require__(627);
+__webpack_require__(624);
 
 var _react = __webpack_require__(4);
 
@@ -19050,7 +19056,7 @@ var cloneElement = ReactElement.cloneElement;
 
 if (process.env.NODE_ENV !== 'production') {
   var lowPriorityWarning = __webpack_require__(628);
-  var canDefineProperty = __webpack_require__(624);
+  var canDefineProperty = __webpack_require__(625);
   var ReactElementValidator = __webpack_require__(728);
   var didWarnPropTypesDeprecated = false;
   createElement = ReactElementValidator.createElement;
@@ -19480,7 +19486,7 @@ module.exports = PooledClass;
 
 var _prodInvariant = __webpack_require__(586);
 
-var ReactCurrentOwner = __webpack_require__(625);
+var ReactCurrentOwner = __webpack_require__(626);
 var REACT_ELEMENT_TYPE = __webpack_require__(726);
 
 var getIteratorFn = __webpack_require__(727);
@@ -20233,6 +20239,269 @@ module.exports = __webpack_require__.p + "1f48f5436b92f6e152b881d3e91fc756.png";
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "5d6bcf03f57b89b7a20fc6d0287cfd8e.png";
+
+/***/ }),
+/* 832 */,
+/* 833 */,
+/* 834 */,
+/* 835 */,
+/* 836 */,
+/* 837 */,
+/* 838 */,
+/* 839 */,
+/* 840 */,
+/* 841 */,
+/* 842 */,
+/* 843 */,
+/* 844 */,
+/* 845 */,
+/* 846 */,
+/* 847 */,
+/* 848 */,
+/* 849 */,
+/* 850 */,
+/* 851 */,
+/* 852 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _getPrototypeOf = __webpack_require__(496);
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = __webpack_require__(44);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(45);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = __webpack_require__(61);
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = __webpack_require__(62);
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _style = __webpack_require__(853);
+
+var _style2 = _interopRequireDefault(_style);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Dubbers = function (_Component) {
+  (0, _inherits3.default)(Dubbers, _Component);
+
+  function Dubbers() {
+    (0, _classCallCheck3.default)(this, Dubbers);
+    return (0, _possibleConstructorReturn3.default)(this, (Dubbers.__proto__ || (0, _getPrototypeOf2.default)(Dubbers)).apply(this, arguments));
+  }
+
+  (0, _createClass3.default)(Dubbers, [{
+    key: 'render',
+    value: function render() {
+      var dubbers = this.props.dubbers;
+
+      return _react2.default.createElement(
+        'div',
+        { className: _style2.default.wraper },
+        _react2.default.createElement(
+          'ul',
+          { className: _style2.default.list },
+          _react2.default.createElement(
+            'li',
+            { className: _style2.default.item },
+            _react2.default.createElement('img', { className: _style2.default.avatar, src: 'http://oezn2ph4e.bkt.clouddn.com/xm.jpeg', alt: '' }),
+            _react2.default.createElement(
+              'div',
+              { className: _style2.default.text },
+              _react2.default.createElement(
+                'div',
+                { className: _style2.default.name },
+                '\u5F90\u654F'
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: _style2.default.desc },
+                '\u9999\u6E2F\u8457\u540D\u914D\u97F3\u5BFC\u6F14/\u6F14\u5458 \u6E05\u6CC9\u914D\u97F3\u5DE5\u4F5C\u5BA4\u521B\u59CB\u4EBA \u9999\u6E2F\u56FD\u8BED\u8457\u540D\u914D\u97F3\u6F14\u5458\uFF0C\u58F0\u97F3\u6D51\u539A\u7565\u6709\u9F3B\u97F3\uFF0C\u5C3E\u97F3\u5E26\u6C14\u58F0\uFF0C\u58F0\u97F3\u5C11\u4FEE\u9970\uFF0C\u8BED\u8C03\u5E73\u5B9E\u800C\u6709\u529B\u3002\u66FE\u5728\u8BB8\u591ATVB\u5267\u96C6\uFF0C\u9999\u6E2F\u7535\u5F71\u4E2D\u505A\u56FD\u8BED\u914D\u97F3\uFF0C\u4EA6\u5728\u4F17\u591A\u56FD\u4EA7\u7535\u89C6\u5267\uFF0C\u5E7F\u544A\u548C\u8BD1\u5236\u7247\u4E2D\u6210\u529F\u914D\u97F3\u3002\u9999\u6E2F\u661F\u7A7A\u536B\u89C6\u9876\u7EA7\u53F0\u58F0\u3002'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            { className: _style2.default.item },
+            _react2.default.createElement('img', { className: _style2.default.avatar, src: 'http://oezn2ph4e.bkt.clouddn.com/xm.jpeg', alt: '' }),
+            _react2.default.createElement(
+              'div',
+              { className: _style2.default.text },
+              _react2.default.createElement(
+                'div',
+                { className: _style2.default.name },
+                '\u5F90\u654F'
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: _style2.default.desc },
+                '\u9999\u6E2F\u8457\u540D\u914D\u97F3\u5BFC\u6F14/\u6F14\u5458 \u6E05\u6CC9\u914D\u97F3\u5DE5\u4F5C\u5BA4\u521B\u59CB\u4EBA \u9999\u6E2F\u56FD\u8BED\u8457\u540D\u914D\u97F3\u6F14\u5458\uFF0C\u58F0\u97F3\u6D51\u539A\u7565\u6709\u9F3B\u97F3\uFF0C\u5C3E\u97F3\u5E26\u6C14\u58F0\uFF0C\u58F0\u97F3\u5C11\u4FEE\u9970\uFF0C\u8BED\u8C03\u5E73\u5B9E\u800C\u6709\u529B\u3002\u66FE\u5728\u8BB8\u591ATVB\u5267\u96C6\uFF0C\u9999\u6E2F\u7535\u5F71\u4E2D\u505A\u56FD\u8BED\u914D\u97F3\uFF0C\u4EA6\u5728\u4F17\u591A\u56FD\u4EA7\u7535\u89C6\u5267\uFF0C\u5E7F\u544A\u548C\u8BD1\u5236\u7247\u4E2D\u6210\u529F\u914D\u97F3\u3002\u9999\u6E2F\u661F\u7A7A\u536B\u89C6\u9876\u7EA7\u53F0\u58F0\u3002'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            { className: _style2.default.item },
+            _react2.default.createElement('img', { className: _style2.default.avatar, src: 'http://oezn2ph4e.bkt.clouddn.com/xm.jpeg', alt: '' }),
+            _react2.default.createElement(
+              'div',
+              { className: _style2.default.text },
+              _react2.default.createElement(
+                'div',
+                { className: _style2.default.name },
+                '\u5F90\u654F'
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: _style2.default.desc },
+                '\u9999\u6E2F\u8457\u540D\u914D\u97F3\u5BFC\u6F14/\u6F14\u5458 \u6E05\u6CC9\u914D\u97F3\u5DE5\u4F5C\u5BA4\u521B\u59CB\u4EBA \u9999\u6E2F\u56FD\u8BED\u8457\u540D\u914D\u97F3\u6F14\u5458\uFF0C\u58F0\u97F3\u6D51\u539A\u7565\u6709\u9F3B\u97F3\uFF0C\u5C3E\u97F3\u5E26\u6C14\u58F0\uFF0C\u58F0\u97F3\u5C11\u4FEE\u9970\uFF0C\u8BED\u8C03\u5E73\u5B9E\u800C\u6709\u529B\u3002\u66FE\u5728\u8BB8\u591ATVB\u5267\u96C6\uFF0C\u9999\u6E2F\u7535\u5F71\u4E2D\u505A\u56FD\u8BED\u914D\u97F3\uFF0C\u4EA6\u5728\u4F17\u591A\u56FD\u4EA7\u7535\u89C6\u5267\uFF0C\u5E7F\u544A\u548C\u8BD1\u5236\u7247\u4E2D\u6210\u529F\u914D\u97F3\u3002\u9999\u6E2F\u661F\u7A7A\u536B\u89C6\u9876\u7EA7\u53F0\u58F0\u3002'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            { className: _style2.default.item },
+            _react2.default.createElement('img', { className: _style2.default.avatar, src: 'http://oezn2ph4e.bkt.clouddn.com/xm.jpeg', alt: '' }),
+            _react2.default.createElement(
+              'div',
+              { className: _style2.default.text },
+              _react2.default.createElement(
+                'div',
+                { className: _style2.default.name },
+                '\u5F90\u654F'
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: _style2.default.desc },
+                '\u9999\u6E2F\u8457\u540D\u914D\u97F3\u5BFC\u6F14/\u6F14\u5458 \u6E05\u6CC9\u914D\u97F3\u5DE5\u4F5C\u5BA4\u521B\u59CB\u4EBA \u9999\u6E2F\u56FD\u8BED\u8457\u540D\u914D\u97F3\u6F14\u5458\uFF0C\u58F0\u97F3\u6D51\u539A\u7565\u6709\u9F3B\u97F3\uFF0C\u5C3E\u97F3\u5E26\u6C14\u58F0\uFF0C\u58F0\u97F3\u5C11\u4FEE\u9970\uFF0C\u8BED\u8C03\u5E73\u5B9E\u800C\u6709\u529B\u3002\u66FE\u5728\u8BB8\u591ATVB\u5267\u96C6\uFF0C\u9999\u6E2F\u7535\u5F71\u4E2D\u505A\u56FD\u8BED\u914D\u97F3\uFF0C\u4EA6\u5728\u4F17\u591A\u56FD\u4EA7\u7535\u89C6\u5267\uFF0C\u5E7F\u544A\u548C\u8BD1\u5236\u7247\u4E2D\u6210\u529F\u914D\u97F3\u3002\u9999\u6E2F\u661F\u7A7A\u536B\u89C6\u9876\u7EA7\u53F0\u58F0\u3002'
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+  return Dubbers;
+}(_react.Component);
+
+// 香港著名配音导演/演员 清泉配音工作室创始人
+// 香港国语著名配音演员，声音浑厚略有鼻音，尾音带气声，声音少修饰，语调平实 而有力。曾在许多TVB剧集，香港电影中做国语配音，亦在众多国产电视剧，广告和译制片中成功配音。
+// 香港星空卫视顶级台声
+// 成龙、刘德华、梁朝伟御用配音
+// 成龙：《特务迷城》小北、《新警察故事》陈国荣、《宝贝计划》人字拖、《功夫之王》僧人
+//  张国荣：《东邪西毒》西毒、《枪王》Rick
+//  梁朝伟：《东京攻略》阿林
+//  刘德华：《门徒》阿坤、《见龙御甲》赵子龙
+
+// 音频工程师、填词人、
+//       歌手、配音导演
+//       上海清泉录音工作室  音频总工程师
+// 暴雪中国 合作游戏语音设计师
+// 《星银岛》央视版 插曲《我还是我》 中文填词、演唱
+// 《石中剑》中文版 全片所有歌曲中文填词、主题曲演唱、声乐指导
+// 《小美人鱼3》中文版 全片所有歌曲中文填词、声乐指导
+// 《飞机总动员》中文版 插曲《爱情机器》中文填词、声乐指导
+//  配音导演作品：
+//  动画片《百变星球历险记》
+//  动画片《莉莉的梦幻湾》
+//  动画片《豆小鸭》第一季
+//  中文填词、声乐指导、部分歌曲演唱
+//  爱探险的朵拉
+//  暴雪《魔兽世界4.0-7.0》国服 游戏内全语音效果制作
+// 暴雪《星际争霸2 自由之翼》国服 游戏内全语音效果制作
+// 暴雪《星际争霸2 虫群之心》国服 游戏内全语音效果制作
+// 暴雪《星际争霸2 虚空之遗》国服 游戏内全语音效果制作
+// 暴雪《暗黑破坏神3》国服 游戏内全语音效果制作
+// 暴雪《炉石传说》国服 游戏内全语音效果制作
+// 暴雪《风暴英雄》国服 游戏内全语音效果制作
+// 米哈游《崩坏3》国服 游戏内全语音 录音、效果制作
+// 网番动画片混音、音效：
+// 《从前有座灵剑山》第一季 中文版 混音师
+// 《从前有座灵剑山》第二季 中文版 混音师
+// 《银之守墓人》中文版 混音师
+// 《中国惊奇先生》混音师、音效师
+// 《王牌御史》混音师、音效师
+// 《妖怪名单》混音师、音效师
+// 《那年那兔那些事儿》第一季 混音师、音效师
+// 《雏蜂》中文版、日文版 混音师、音效师
+// 《撸时代》第一季 混音师、音效师
+// 《凸变英雄》中文版 混音师
+// 《一课一练》中文版 混音师
+// 《灵契》中文版 混音师、音效师
+// 《馒头日记》混音师、音效师
+// 《我叫白小飞》混音师、音效师
+// 《端脑》混音师、音效师
+
+
+exports.default = Dubbers;
+module.exports = exports['default'];
+
+/***/ }),
+/* 853 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(854);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(478)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--2-2!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/postcss-loader/lib/index.js??postcss!./style.scss", function() {
+			var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--2-2!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/postcss-loader/lib/index.js??postcss!./style.scss");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 854 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(477)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".D3ku2fXLdMTEGzm50yNYr {\n  width: 100px;\n  float: left;\n  margin-right: 10px; }\n\n.VOlccR6hiVhtBa09Ns8D3 {\n  display: inline-block;\n  width: 20%;\n  padding: 10px 5px; }\n", ""]);
+
+// exports
+exports.locals = {
+	"avatar": "D3ku2fXLdMTEGzm50yNYr",
+	"item": "VOlccR6hiVhtBa09Ns8D3"
+};
 
 /***/ })
 ]));

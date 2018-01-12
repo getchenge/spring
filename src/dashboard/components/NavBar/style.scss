@@ -16,11 +16,17 @@
   text-align: center;
 }
 
+.sub-item {
+  padding: 0 10px!important;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .a {
   text-align: center;
 }
 
-.aplus{
+.aplus {
   text-align: center;
   font-size: 30px;
 }

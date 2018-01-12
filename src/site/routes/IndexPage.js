@@ -9,6 +9,7 @@ import Brief from '../components/Content/Brief.js';
 import Studio from '../components/Content/Studio.js';
 import News from '../components/News';
 import Partner from '../components/Partner';
+import Dubbers from '../components/Dubbers';
 
 function findByName(name) {
   return (item) => {
@@ -31,6 +32,7 @@ function IndexPage({ location, list, loading }) {
   const navs = getProperty(list, 'navigation').value;
   const pix = getProperty(list, 'slider').value;
   const news = getProperty(list, 'news').value;
+  const dubbers = getProperty(list, 'dubbers').value;
   const header = <Header location={location} navs={navs}></Header>;
   const footer = <Footer />;
 
@@ -38,11 +40,12 @@ function IndexPage({ location, list, loading }) {
     <MainLayout header={header} footer={footer} isBuilding={isBuilding}>
       <Banner pix={pix} loading={loading} />
       <News list={news} />
+      <Dubbers list={dubbers} />
       <div className={styles.wraper}>
         <Brief />
         <Studio />
       </div>
-      <Partner></Partner>
+      <Partner />
     </MainLayout>
   );
 }

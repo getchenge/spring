@@ -7941,7 +7941,7 @@ var NavBar = function (_Component) {
               { className: _style2.default.item, 'data-key': link, key: link },
               _react2.default.createElement(
                 _router.Link,
-                { className: _style2.default.a, to: link },
+                { className: _style2.default.a + ' ' + _style2.default['sub-item'], to: link },
                 item.caption || item.title || idx + 1
               )
             );
@@ -7955,7 +7955,7 @@ var NavBar = function (_Component) {
               { className: _style2.default.item, key: newLink },
               _react2.default.createElement(
                 _router.Link,
-                { className: _style2.default.a, to: newLink },
+                { className: _style2.default.a + ' ' + _style2.default['sub-item'], to: newLink },
                 '+'
               )
             )
@@ -8182,12 +8182,13 @@ exports = module.exports = __webpack_require__(477)(undefined);
 
 
 // module
-exports.push([module.i, "._249Z3JCHciGW29Zo38-CMN {\n  display: block;\n  font-size: 30px !important;\n  width: 100%;\n  color: #eee;\n  background: #ccc;\n  text-align: center;\n  padding: 15px !important;\n  height: auto !important; }\n\n._1iQ-SWLUHrkl6m8WayKLYl {\n  display: block;\n  width: 100%;\n  padding: 0 !important;\n  text-align: center; }\n\n._2Ts02CnKCU1AmMbO8c9S6E {\n  text-align: center; }\n\n._3qvogWiQoMClclHOeC-2g1 {\n  text-align: center;\n  font-size: 30px; }\n", ""]);
+exports.push([module.i, "._249Z3JCHciGW29Zo38-CMN {\n  display: block;\n  font-size: 30px !important;\n  width: 100%;\n  color: #eee;\n  background: #ccc;\n  text-align: center;\n  padding: 15px !important;\n  height: auto !important; }\n\n._1iQ-SWLUHrkl6m8WayKLYl {\n  display: block;\n  width: 100%;\n  padding: 0 !important;\n  text-align: center; }\n\n.rYiaugPjD2UVYfskmqrzd {\n  padding: 0 10px !important;\n  text-overflow: ellipsis;\n  overflow: hidden; }\n\n._2Ts02CnKCU1AmMbO8c9S6E {\n  text-align: center; }\n\n._3qvogWiQoMClclHOeC-2g1 {\n  text-align: center;\n  font-size: 30px; }\n", ""]);
 
 // exports
 exports.locals = {
 	"logo": "_249Z3JCHciGW29Zo38-CMN",
 	"item": "_1iQ-SWLUHrkl6m8WayKLYl",
+	"sub-item": "rYiaugPjD2UVYfskmqrzd",
 	"a": "_2Ts02CnKCU1AmMbO8c9S6E",
 	"aplus": "_3qvogWiQoMClclHOeC-2g1"
 };
