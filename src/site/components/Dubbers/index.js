@@ -3,50 +3,32 @@ import styles from './style.scss';
 
 class Dubbers extends Component {
   render() {
-    const { dubbers } = this.props;
+    const { list } = this.props;
+    let dubbers = '';
+
+    list && list.length > 0 && (dubbers = list.map((item) => {
+      const avatarStyle = {
+        'backgroundImage': `url(${item.avatar})`
+      };
+      return (
+        <li className={styles.item}>
+          <div className={styles.avatar} style={avatarStyle}>
+            <div className={styles['avatar-name']}>{item.name}</div>
+          </div>
+          {/* <img className={styles.avatar} src={item.avatar} alt="" /> */}
+          <div className={styles.text}>
+            <div className={styles.name}>{item.name}</div>
+            <pre className={styles.desc}>
+              {item.description}
+            </pre>
+          </div>
+        </li>
+      );
+    }));
     return (
       <div className={styles.wraper}>
         <ul className={styles.list}>
-          <li className={styles.item}>
-            <img className={styles.avatar} src="http://oezn2ph4e.bkt.clouddn.com/xm.jpeg" alt="" />
-            <div className={styles.text}>
-              <div className={styles.name}>徐敏</div>
-              <div className={styles.desc}>
-                香港著名配音导演/演员 清泉配音工作室创始人
-              香港国语著名配音演员，声音浑厚略有鼻音，尾音带气声，声音少修饰，语调平实而有力。曾在许多TVB剧集，香港电影中做国语配音，亦在众多国产电视剧，广告和译制片中成功配音。香港星空卫视顶级台声。
-              </div>
-            </div>
-          </li>
-          <li className={styles.item}>
-            <img className={styles.avatar} src="http://oezn2ph4e.bkt.clouddn.com/xm.jpeg" alt="" />
-            <div className={styles.text}>
-              <div className={styles.name}>徐敏</div>
-              <div className={styles.desc}>
-                香港著名配音导演/演员 清泉配音工作室创始人
-              香港国语著名配音演员，声音浑厚略有鼻音，尾音带气声，声音少修饰，语调平实而有力。曾在许多TVB剧集，香港电影中做国语配音，亦在众多国产电视剧，广告和译制片中成功配音。香港星空卫视顶级台声。
-              </div>
-            </div>
-          </li>
-          <li className={styles.item}>
-            <img className={styles.avatar} src="http://oezn2ph4e.bkt.clouddn.com/xm.jpeg" alt="" />
-            <div className={styles.text}>
-              <div className={styles.name}>徐敏</div>
-              <div className={styles.desc}>
-                香港著名配音导演/演员 清泉配音工作室创始人
-              香港国语著名配音演员，声音浑厚略有鼻音，尾音带气声，声音少修饰，语调平实而有力。曾在许多TVB剧集，香港电影中做国语配音，亦在众多国产电视剧，广告和译制片中成功配音。香港星空卫视顶级台声。
-              </div>
-            </div>
-          </li>
-          <li className={styles.item}>
-            <img className={styles.avatar} src="http://oezn2ph4e.bkt.clouddn.com/xm.jpeg" alt="" />
-            <div className={styles.text}>
-              <div className={styles.name}>徐敏</div>
-              <div className={styles.desc}>
-                香港著名配音导演/演员 清泉配音工作室创始人
-              香港国语著名配音演员，声音浑厚略有鼻音，尾音带气声，声音少修饰，语调平实而有力。曾在许多TVB剧集，香港电影中做国语配音，亦在众多国产电视剧，广告和译制片中成功配音。香港星空卫视顶级台声。
-              </div>
-            </div>
-          </li>
+          {dubbers}
         </ul>
       </div>
     );
