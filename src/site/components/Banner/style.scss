@@ -36,18 +36,24 @@
   height: 80px;
   line-height: 80px;
   text-align: center;
-  background: rgba(#000, .3);
+  background: rgba(#000, .6);
   color: #fff;
   font-size: 40px;
   transform: translateY(-50%);
   cursor: pointer;
   border-radius: 6px;
+  transition: 400ms;
+  &:hover {
+    background: rgba(#000, .3);
+  }
 }
-.prev{
-  left:40px;
+
+.prev {
+  left: 40px;
 }
-.next{
-  right:40px;
+
+.next {
+  right: 40px;
 }
 
 .img {

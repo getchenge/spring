@@ -71,7 +71,7 @@ class Banner extends Component {
     });
     const loading_pane = loading ? (<div className={styles.slide}><h3>loading</h3></div>) : '';
     return (
-      <div className={styles.container}>
+      <div className={styles.container} id="banner">
         <Slider {...settings} ref={c => this.slider = c}>
           {slides}
           {loading_pane}

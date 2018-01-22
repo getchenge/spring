@@ -13423,7 +13423,7 @@ var Banner = function (_Component) {
       ) : '';
       return _react2.default.createElement(
         'div',
-        { className: _style2.default.container },
+        { className: _style2.default.container, id: 'banner' },
         _react2.default.createElement(
           _carousel2.default,
           (0, _extends3.default)({}, settings, { ref: function ref(c) {
@@ -15461,7 +15461,7 @@ exports = module.exports = __webpack_require__(477)(undefined);
 
 
 // module
-exports.push([module.i, ".NlEmXmIn2Fs1wsiojhytX {\n  height: 400px !important;\n  line-height: 400px !important;\n  position: relative; }\n\n@-webkit-keyframes y8srTvuALirDAzFKSBOXj {\n  0% {\n    -webkit-filter: blur(10px);\n    filter: blur(10px); }\n  100% {\n    -webkit-filter: blur(60px);\n    filter: blur(60px); } }\n\n@keyframes y8srTvuALirDAzFKSBOXj {\n  0% {\n    -webkit-filter: blur(10px);\n    filter: blur(10px); }\n  100% {\n    -webkit-filter: blur(60px);\n    filter: blur(60px); } }\n\n._3YQYj9bZwGJ5OMYbyZDrXn {\n  background-size: contain !important;\n  background-repeat: no-repeat;\n  -webkit-filter: blur(38px);\n  filter: blur(38px);\n  height: 100%;\n  width: 100%;\n  position: absolute;\n  left: 0;\n  top: 0; }\n\n.zw1H4AHNmTclzAxlAtyeR {\n  position: relative; }\n\n.ORQy4MP1Ritato402Kxgp,\n.yhQKfhndMzjKbxtYRnkbi {\n  position: absolute;\n  top: 50%;\n  width: 80px;\n  height: 80px;\n  line-height: 80px;\n  text-align: center;\n  background: rgba(0, 0, 0, 0.3);\n  color: #fff;\n  font-size: 40px;\n  -webkit-transform: translateY(-50%);\n  transform: translateY(-50%);\n  cursor: pointer;\n  border-radius: 6px; }\n\n.ORQy4MP1Ritato402Kxgp {\n  left: 40px; }\n\n.yhQKfhndMzjKbxtYRnkbi {\n  right: 40px; }\n\n._2MIGdBmIm3hTVs58ecw0E7 {\n  max-width: 100%;\n  max-height: 100%;\n  margin: 0 auto;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-user-drag: none;\n  position: relative;\n  z-index: 100; }\n", ""]);
+exports.push([module.i, ".NlEmXmIn2Fs1wsiojhytX {\n  height: 400px !important;\n  line-height: 400px !important;\n  position: relative; }\n\n@-webkit-keyframes y8srTvuALirDAzFKSBOXj {\n  0% {\n    -webkit-filter: blur(10px);\n    filter: blur(10px); }\n  100% {\n    -webkit-filter: blur(60px);\n    filter: blur(60px); } }\n\n@keyframes y8srTvuALirDAzFKSBOXj {\n  0% {\n    -webkit-filter: blur(10px);\n    filter: blur(10px); }\n  100% {\n    -webkit-filter: blur(60px);\n    filter: blur(60px); } }\n\n._3YQYj9bZwGJ5OMYbyZDrXn {\n  background-size: contain !important;\n  background-repeat: no-repeat;\n  -webkit-filter: blur(38px);\n  filter: blur(38px);\n  height: 100%;\n  width: 100%;\n  position: absolute;\n  left: 0;\n  top: 0; }\n\n.zw1H4AHNmTclzAxlAtyeR {\n  position: relative; }\n\n.ORQy4MP1Ritato402Kxgp,\n.yhQKfhndMzjKbxtYRnkbi {\n  position: absolute;\n  top: 50%;\n  width: 80px;\n  height: 80px;\n  line-height: 80px;\n  text-align: center;\n  background: rgba(0, 0, 0, 0.6);\n  color: #fff;\n  font-size: 40px;\n  -webkit-transform: translateY(-50%);\n  transform: translateY(-50%);\n  cursor: pointer;\n  border-radius: 6px;\n  transition: 400ms; }\n  .ORQy4MP1Ritato402Kxgp:hover,\n  .yhQKfhndMzjKbxtYRnkbi:hover {\n    background: rgba(0, 0, 0, 0.3); }\n\n.ORQy4MP1Ritato402Kxgp {\n  left: 40px; }\n\n.yhQKfhndMzjKbxtYRnkbi {\n  right: 40px; }\n\n._2MIGdBmIm3hTVs58ecw0E7 {\n  max-width: 100%;\n  max-height: 100%;\n  margin: 0 auto;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-user-drag: none;\n  position: relative;\n  z-index: 100; }\n", ""]);
 
 // exports
 exports.locals = {
@@ -15484,6 +15484,26 @@ exports.locals = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _getPrototypeOf = __webpack_require__(495);
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = __webpack_require__(44);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(45);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = __webpack_require__(61);
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = __webpack_require__(62);
+
+var _inherits3 = _interopRequireDefault(_inherits2);
 
 var _menu = __webpack_require__(519);
 
@@ -15509,52 +15529,74 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var SubMenu = _menu2.default.SubMenu;
 
+var Header = function (_Component) {
+  (0, _inherits3.default)(Header, _Component);
 
-function Header(_ref) {
-  var location = _ref.location,
-      navs = _ref.navs;
+  function Header(props) {
+    (0, _classCallCheck3.default)(this, Header);
+    return (0, _possibleConstructorReturn3.default)(this, (Header.__proto__ || (0, _getPrototypeOf2.default)(Header)).call(this, props));
+  }
 
-  var menu_nav = navs && navs.map(function (nav, idx) {
-    var link = nav.target ? _react2.default.createElement(
-      _router.Link,
-      { to: nav.link, target: nav.target },
-      nav.title
-    ) : _react2.default.createElement(
-      _router.Link,
-      { to: nav.link },
-      nav.title
-    );
-    return _react2.default.createElement(
-      _menu2.default.Item,
-      { key: idx },
-      link
-    );
-  });
-  return _react2.default.createElement(
-    _menu2.default,
-    {
-      selectedKeys: [location.pathname],
-      mode: 'horizontal',
-      theme: 'dark',
-      className: _style2.default.menu
-    },
-    _react2.default.createElement(
-      'div',
-      { key: '/index', className: _style2.default.logo },
-      _react2.default.createElement(
-        _router.Link,
-        { to: '/' },
-        _react2.default.createElement('img', { className: _style2.default.logoimg, src: _logo2.default }),
+  (0, _createClass3.default)(Header, [{
+    key: 'navigate',
+    value: function navigate(param, e) {
+      var selector = param.replace(/[^a-z]/ig, '');
+      var to = document.querySelector('#' + selector);
+      if (!to) {
+        return;
+      }
+      to.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var _props = this.props,
+          locaton = _props.locaton,
+          navs = _props.navs;
+
+      var menu_nav = navs && navs.map(function (nav, idx) {
+        // const link = nav.target ? (<Link to={nav.link} target={nav.target}>{nav.title}</Link>) : (<Link to={nav.link}>{nav.title}</Link>);
+        var link = _react2.default.createElement(
+          'div',
+          { onClick: _this2.navigate.bind(_this2, nav.link) },
+          nav.title
+        );
+        return _react2.default.createElement(
+          _menu2.default.Item,
+          { key: idx },
+          link
+        );
+      });
+      return _react2.default.createElement(
+        _menu2.default,
+        {
+          selectedKeys: [location.pathname],
+          mode: 'horizontal',
+          theme: 'dark',
+          className: _style2.default.menu
+        },
         _react2.default.createElement(
-          'span',
-          { className: _style2.default.logoname },
-          '\u6E05\u6CC9'
-        )
-      )
-    ),
-    menu_nav
-  );
-}
+          'div',
+          { key: '/index', className: _style2.default.logo },
+          _react2.default.createElement(
+            _router.Link,
+            { to: '/' },
+            _react2.default.createElement('img', { className: _style2.default.logoimg, src: _logo2.default }),
+            _react2.default.createElement(
+              'span',
+              { className: _style2.default.logoname },
+              '\u6E05\u6CC9'
+            )
+          )
+        ),
+        menu_nav
+      );
+    }
+  }]);
+  return Header;
+}(_react.Component);
 
 exports.default = Header;
 module.exports = exports['default'];
@@ -15599,7 +15641,7 @@ exports = module.exports = __webpack_require__(477)(undefined);
 
 
 // module
-exports.push([module.i, "._3iz92yTtuTQ5B6wHGryelz {\n  background-color: #333; }\n\n._35Qf8F85iV1irWKRxd0L86 {\n  line-height: 52px; }\n\n._1FK1OiPnCLsO0I-RaGywCS {\n  vertical-align: middle;\n  padding-left: 15px;\n  margin-right: 20px;\n  background: #fff;\n  float: left; }\n\n.Pw7HtAd6E3U4m4KUmODCD {\n  width: 40px;\n  vertical-align: middle; }\n\n._1d7SV--rHhhkUlzEjeq8vF {\n  font-family: KaiTi, STKaiti;\n  -webkit-writing-mode: vertical-rl;\n  -ms-writing-mode: tb-rl;\n  writing-mode: vertical-rl;\n  letter-spacing: 0.1em;\n  vertical-align: top;\n  width: 2em;\n  position: relative;\n  top: 8px;\n  left: 7px;\n  font-size: 16px;\n  color: #000; }\n\n.tH3GydXJIR98epmf4d1oc {\n  display: inline-block; }\n", ""]);
+exports.push([module.i, "._3iz92yTtuTQ5B6wHGryelz {\n  background-color: #333; }\n\n._35Qf8F85iV1irWKRxd0L86 {\n  line-height: 52px; }\n\n._1FK1OiPnCLsO0I-RaGywCS {\n  vertical-align: middle;\n  padding-left: 15px;\n  margin-right: 20px;\n  background: #fff;\n  float: left; }\n  ._1FK1OiPnCLsO0I-RaGywCS:hover {\n    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3); }\n\n.Pw7HtAd6E3U4m4KUmODCD {\n  width: 40px;\n  vertical-align: middle; }\n\n._1d7SV--rHhhkUlzEjeq8vF {\n  font-family: KaiTi, STKaiti;\n  -webkit-writing-mode: vertical-rl;\n  -ms-writing-mode: tb-rl;\n  writing-mode: vertical-rl;\n  letter-spacing: 0.1em;\n  vertical-align: top;\n  width: 2em;\n  position: relative;\n  top: 8px;\n  left: 7px;\n  font-size: 16px;\n  color: #000; }\n\n.tH3GydXJIR98epmf4d1oc {\n  display: inline-block; }\n", ""]);
 
 // exports
 exports.locals = {
@@ -15697,7 +15739,7 @@ var Footer = function (_Component) {
       var y = new Date().getFullYear();
       return _react2.default.createElement(
         'div',
-        { className: _style2.default.container },
+        { className: _style2.default.container, id: 'contact' },
         _react2.default.createElement(
           'div',
           { className: _style2.default.focus },
@@ -15720,6 +15762,12 @@ var Footer = function (_Component) {
             'a',
             { href: 'https://weibo.com/springmedia', className: _style2.default.weibo, target: '_blank' },
             _react2.default.createElement(_icon2.default, { type: 'weibo' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: '' },
+            _react2.default.createElement(_icon2.default, { type: 'phone' }),
+            ': 021-52527144'
           )
         ),
         _react2.default.createElement(
@@ -15733,9 +15781,14 @@ var Footer = function (_Component) {
           'p',
           { className: _style2.default.copyright },
           _react2.default.createElement(
-            'a',
-            { href: 'http://www.miibeian.gov.cn/' },
+            'span',
+            { className: _style2.default.gap },
             '\u6CAAICP\u590716047667\u53F7'
+          ),
+          _react2.default.createElement(
+            'span',
+            null,
+            '\u6CAA\u516C\u7F51\u590731010702003953\u53F7'
           )
         )
       );
@@ -15787,7 +15840,7 @@ exports = module.exports = __webpack_require__(477)(undefined);
 
 
 // module
-exports.push([module.i, "._1Lkfxjvi0bNWMgaUqglmto {\n  width: 100%;\n  min-height: 50px;\n  padding: 1.8em 2em 0 2em;\n  background: rgba(0, 0, 0, 0.8);\n  color: #fafafa;\n  position: relative; }\n\n._3d72H7tK_BftER0XBVl_jw {\n  padding-bottom: 10px;\n  width: 960px;\n  margin: 0 auto;\n  text-align: center; }\n\n._20nika0805fynjTqBCjP0c {\n  width: 960px;\n  margin: 0 auto;\n  text-align: right;\n  position: relative; }\n\n._2gvsGjxcBtt9cu6hU05nwS,\n._30dOnxXSfrF9mAoHIfmPwe {\n  color: #aaa;\n  font-size: 20px;\n  margin-right: 12px;\n  z-index: 2;\n  position: relative;\n  vertical-align: middle; }\n\n._2gvsGjxcBtt9cu6hU05nwS:hover, ._2gvsGjxcBtt9cu6hU05nwS._2625rBPIfvFjNGK3RM8P83 {\n  color: #609700; }\n\n._30dOnxXSfrF9mAoHIfmPwe:hover {\n  color: #EA4225; }\n\n.rhKE1lWJO6Z78kQx1nGQp {\n  width: 120px;\n  height: 120px;\n  position: absolute;\n  right: 0px;\n  top: -124px;\n  padding: 3px;\n  background: rgba(255, 255, 255, 0.7);\n  opacity: 0;\n  -webkit-transform: translateY(50px);\n  transform: translateY(50px);\n  transition: 400ms;\n  border-radius: 2px; }\n  .rhKE1lWJO6Z78kQx1nGQp:after {\n    content: '';\n    position: absolute;\n    bottom: -12px;\n    right: 44%;\n    border: 6px solid transparent;\n    border-top-color: rgba(255, 255, 255, 0.7); }\n\n._1jbsC8dkrWRfvzMRH_c35c {\n  width: 100%; }\n\n._1PbMFvqTNpLJGpJ1SE6pGD {\n  opacity: 1;\n  -webkit-transform: translateY(0px);\n  transform: translateY(0px); }\n\n._1NoHkmbF4iAlMWYdYKanrE {\n  color: rgba(255, 255, 255, 0.7);\n  margin-right: 1em; }\n", ""]);
+exports.push([module.i, "._1Lkfxjvi0bNWMgaUqglmto {\n  width: 100%;\n  min-height: 50px;\n  padding: 1.8em 2em 0 2em;\n  background: rgba(0, 0, 0, 0.8);\n  color: #fafafa;\n  position: relative; }\n\n._3d72H7tK_BftER0XBVl_jw {\n  padding-bottom: 10px;\n  width: 960px;\n  margin: 0 auto;\n  text-align: center; }\n\n._20nika0805fynjTqBCjP0c {\n  width: 960px;\n  margin: 0 auto;\n  text-align: right;\n  position: relative; }\n\n._2gvsGjxcBtt9cu6hU05nwS,\n._30dOnxXSfrF9mAoHIfmPwe {\n  color: #aaa;\n  font-size: 20px;\n  margin-right: 12px;\n  z-index: 2;\n  position: relative;\n  vertical-align: middle; }\n\n._2gvsGjxcBtt9cu6hU05nwS:hover, ._2gvsGjxcBtt9cu6hU05nwS._2625rBPIfvFjNGK3RM8P83 {\n  color: #609700; }\n\n._30dOnxXSfrF9mAoHIfmPwe:hover {\n  color: #EA4225; }\n\n.rhKE1lWJO6Z78kQx1nGQp {\n  width: 120px;\n  height: 120px;\n  position: absolute;\n  right: 0px;\n  top: -124px;\n  padding: 3px;\n  background: rgba(255, 255, 255, 0.7);\n  opacity: 0;\n  -webkit-transform: translateY(50px);\n  transform: translateY(50px);\n  transition: 400ms;\n  border-radius: 2px;\n  pointer-events: none; }\n  .rhKE1lWJO6Z78kQx1nGQp:after {\n    content: '';\n    position: absolute;\n    bottom: -12px;\n    right: 44%;\n    border: 6px solid transparent;\n    border-top-color: rgba(255, 255, 255, 0.7); }\n\n._1jbsC8dkrWRfvzMRH_c35c {\n  width: 100%; }\n\n._1PbMFvqTNpLJGpJ1SE6pGD {\n  opacity: 1;\n  -webkit-transform: translateY(0px);\n  transform: translateY(0px); }\n\n._1NoHkmbF4iAlMWYdYKanrE {\n  color: rgba(255, 255, 255, 0.7);\n  margin-right: 1em; }\n\n._2Kgf6iamJNUNor9ad83OuE {\n  margin-right: 1.7em; }\n", ""]);
 
 // exports
 exports.locals = {
@@ -15800,7 +15853,8 @@ exports.locals = {
 	"wechatqrcode": "rhKE1lWJO6Z78kQx1nGQp",
 	"qrcode": "_1jbsC8dkrWRfvzMRH_c35c",
 	"show": "_1PbMFvqTNpLJGpJ1SE6pGD",
-	"follow": "_1NoHkmbF4iAlMWYdYKanrE"
+	"follow": "_1NoHkmbF4iAlMWYdYKanrE",
+	"gap": "_2Kgf6iamJNUNor9ad83OuE"
 };
 
 /***/ }),
@@ -18338,7 +18392,7 @@ var Partner = function (_Component) {
       });
       return _React2.default.createElement(
         'div',
-        { className: _styles2.default.container },
+        { className: _styles2.default.container, id: 'partner' },
         _React2.default.createElement(
           'div',
           { className: _styles2.default.caption },
@@ -19523,7 +19577,7 @@ exports = module.exports = __webpack_require__(477)(undefined);
 
 
 // module
-exports.push([module.i, "._20UTkEebXXyf5UYFJczV2B {\n  background: #333;\n  width: 100%;\n  position: relative; }\n\n._2rrvupMrFgFsPDIw7XRjKy {\n  width: 800px;\n  margin: 0 auto;\n  overflow: hidden;\n  box-shadow: inset 0 0 10px;\n  padding: 0 30px;\n  border-radius: 80px;\n  /*fix lower verison of chrome*/\n  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC); }\n\n.J1n7c8CynbEYRSDFBXbHP {\n  font-size: 30px;\n  color: #fff;\n  width: 800px;\n  margin: 0 auto;\n  padding-top: 9px;\n  padding-bottom: 3px; }\n\n._3WD24TFM23yRuChGoMl6Rc {\n  width: 70px;\n  height: 70px;\n  border-radius: 100%;\n  float: left;\n  margin-right: 66px;\n  background-repeat: no-repeat;\n  background-position: 50%; }\n\n.btOfJBVcxIDPFx_VC9Ltd {\n  background-color: #000;\n  box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.1); }\n\n._2msDcBy9ZPO2FN2GT1vCdN {\n  background-color: #fff;\n  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9); }\n\n@-webkit-keyframes _1yKYc2lSRcczboSVw_ExVJ {\n  0% {\n    -webkit-transform: translateX(0);\n    transform: translateX(0); }\n  49.999% {\n    -webkit-transform: translateX(-1224px);\n    transform: translateX(-1224px); }\n  50% {\n    -webkit-transform: translateX(0);\n    transform: translateX(0); }\n  100% {\n    -webkit-transform: translateX(-1224px);\n    transform: translateX(-1224px); } }\n\n@keyframes _1yKYc2lSRcczboSVw_ExVJ {\n  0% {\n    -webkit-transform: translateX(0);\n    transform: translateX(0); }\n  49.999% {\n    -webkit-transform: translateX(-1224px);\n    transform: translateX(-1224px); }\n  50% {\n    -webkit-transform: translateX(0);\n    transform: translateX(0); }\n  100% {\n    -webkit-transform: translateX(-1224px);\n    transform: translateX(-1224px); } }\n\n._3U3qL3Qw3IrEuSzDLiLeCb {\n  width: 16000px;\n  overflow: hidden;\n  padding: 14px 0;\n  -webkit-animation: _1yKYc2lSRcczboSVw_ExVJ 30000ms linear infinite;\n  animation: _1yKYc2lSRcczboSVw_ExVJ 30000ms linear infinite; }\n\n._3DB-HZ1MGEQKHnnZ-3VnYX {\n  height: 1px;\n  width: 100%;\n  background: linear-gradient(to right, #333, rgba(255, 255, 255, 0.6), #333);\n  margin-top: 30px; }\n", ""]);
+exports.push([module.i, "._20UTkEebXXyf5UYFJczV2B {\n  background: #333;\n  width: 100%;\n  position: relative; }\n\n._2rrvupMrFgFsPDIw7XRjKy {\n  width: 800px;\n  margin: 0 auto;\n  overflow: hidden;\n  padding: 0 30px;\n  border-radius: 80px;\n  position: relative;\n  /*fix lower verison of chrome*/\n  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC); }\n  ._2rrvupMrFgFsPDIw7XRjKy:after {\n    content: '';\n    display: block;\n    box-shadow: inset 0 0 10px;\n    width: 100%;\n    height: 100%;\n    border-radius: 80px;\n    position: absolute;\n    z-index: 10;\n    top: 0;\n    left: 0; }\n\n.J1n7c8CynbEYRSDFBXbHP {\n  font-size: 30px;\n  color: #fff;\n  width: 800px;\n  margin: 0 auto;\n  padding-top: 9px;\n  padding-bottom: 3px; }\n\n._3WD24TFM23yRuChGoMl6Rc {\n  width: 70px;\n  height: 70px;\n  border-radius: 100%;\n  float: left;\n  margin-right: 66px;\n  background-repeat: no-repeat;\n  background-position: 50%; }\n\n.btOfJBVcxIDPFx_VC9Ltd {\n  background-color: #000;\n  box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.1); }\n\n._2msDcBy9ZPO2FN2GT1vCdN {\n  background-color: #fff;\n  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9); }\n\n@-webkit-keyframes _1yKYc2lSRcczboSVw_ExVJ {\n  0% {\n    -webkit-transform: translateX(0);\n    transform: translateX(0); }\n  49.999% {\n    -webkit-transform: translateX(-1224px);\n    transform: translateX(-1224px); }\n  50% {\n    -webkit-transform: translateX(0);\n    transform: translateX(0); }\n  100% {\n    -webkit-transform: translateX(-1224px);\n    transform: translateX(-1224px); } }\n\n@keyframes _1yKYc2lSRcczboSVw_ExVJ {\n  0% {\n    -webkit-transform: translateX(0);\n    transform: translateX(0); }\n  49.999% {\n    -webkit-transform: translateX(-1224px);\n    transform: translateX(-1224px); }\n  50% {\n    -webkit-transform: translateX(0);\n    transform: translateX(0); }\n  100% {\n    -webkit-transform: translateX(-1224px);\n    transform: translateX(-1224px); } }\n\n._3U3qL3Qw3IrEuSzDLiLeCb {\n  width: 16000px;\n  overflow: hidden;\n  padding: 14px 0;\n  -webkit-animation: _1yKYc2lSRcczboSVw_ExVJ 30000ms linear infinite;\n  animation: _1yKYc2lSRcczboSVw_ExVJ 30000ms linear infinite; }\n\n._3DB-HZ1MGEQKHnnZ-3VnYX {\n  height: 1px;\n  width: 100%;\n  background: linear-gradient(to right, #333, rgba(255, 255, 255, 0.6), #333);\n  margin-top: 30px; }\n", ""]);
 
 // exports
 exports.locals = {
@@ -19636,53 +19690,75 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Dubbers = function (_Component) {
   (0, _inherits3.default)(Dubbers, _Component);
 
-  function Dubbers() {
+  function Dubbers(props) {
     (0, _classCallCheck3.default)(this, Dubbers);
-    return (0, _possibleConstructorReturn3.default)(this, (Dubbers.__proto__ || (0, _getPrototypeOf2.default)(Dubbers)).apply(this, arguments));
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (Dubbers.__proto__ || (0, _getPrototypeOf2.default)(Dubbers)).call(this, props));
+
+    _this.state = {
+      bigPics: []
+    };
+
+    _this.togglePic = function (idx, e) {
+      var bigPics = _this.state.bigPics;
+      var newPics = [];
+      newPics[idx] = !bigPics[idx];
+      _this.setState({
+        bigPics: newPics
+      });
+    };
+
+    return _this;
   }
 
   (0, _createClass3.default)(Dubbers, [{
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var list = this.props.list;
 
       var dubbers = '';
-
-      list && list.length > 0 && (dubbers = list.map(function (item) {
+      list && list.length > 0 && (dubbers = list.map(function (item, idx) {
         var avatarStyle = {
           'backgroundImage': 'url(' + item.avatar + ')'
         };
+        var mode = _this2.state.bigPics[idx] ? _style2.default.item + ' ' + _style2.default.thumb : '' + _style2.default.item;
         return _react2.default.createElement(
           'li',
-          { className: _style2.default.item },
+          { className: mode },
           _react2.default.createElement(
             'div',
-            { className: _style2.default.avatar, style: avatarStyle },
+            { className: _style2.default.info },
             _react2.default.createElement(
               'div',
-              { className: _style2.default['avatar-name'] },
-              item.name
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: _style2.default.text },
-            _react2.default.createElement(
-              'div',
-              { className: _style2.default.name },
-              item.name
+              { className: _style2.default.avatar, onClick: _this2.togglePic.bind(_this2, idx), style: avatarStyle },
+              _react2.default.createElement(
+                'div',
+                { className: _style2.default['avatar-name'] },
+                item.name
+              )
             ),
             _react2.default.createElement(
-              'pre',
-              { className: _style2.default.desc },
-              item.description
+              'div',
+              { className: _style2.default.text },
+              _react2.default.createElement(
+                'div',
+                { className: _style2.default.name },
+                item.name
+              ),
+              _react2.default.createElement(
+                'pre',
+                { className: _style2.default.desc },
+                item.description
+              )
             )
           )
         );
       }));
       return _react2.default.createElement(
         'div',
-        { className: _style2.default.wraper },
+        { className: _style2.default.wraper, id: 'dubbers' },
         _react2.default.createElement(
           'ul',
           { className: _style2.default.list },
@@ -19786,7 +19862,7 @@ exports = module.exports = __webpack_require__(477)(undefined);
 
 
 // module
-exports.push([module.i, "._1A1frGOhIblVy3v1tZ8opZ {\n  background: #333;\n  color: #fff; }\n\n._24kxZ1GYT2F0KuIz74Wsjy {\n  width: 900px;\n  margin: 0 auto; }\n\n.D3ku2fXLdMTEGzm50yNYr {\n  width: 450px;\n  float: left;\n  height: 450px;\n  border-radius: 0;\n  background-size: cover;\n  background-repeat: no-repeat;\n  position: relative;\n  cursor: pointer;\n  transition: 300ms;\n  box-shadow: inset 0 0 0 0 transparent; }\n  .D3ku2fXLdMTEGzm50yNYr .Gy58uykNCwG7opARsi-Xp {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);\n    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);\n    font-size: 45px;\n    opacity: 0;\n    transition: 400ms;\n    color: #fff; }\n  .D3ku2fXLdMTEGzm50yNYr:hover {\n    box-shadow: inset 0 0 0 400px rgba(0, 0, 0, 0.6); }\n    .D3ku2fXLdMTEGzm50yNYr:hover .Gy58uykNCwG7opARsi-Xp {\n      opacity: 1;\n      -webkit-transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);\n      transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1); }\n\n.VOlccR6hiVhtBa09Ns8D3 {\n  display: inline-block;\n  width: 40%;\n  vertical-align: top;\n  margin-right: 85px; }\n\n.gx8CHDq2WE75-Nm7MudHB {\n  word-wrap: break-word;\n  white-space: pre-wrap; }\n\n.AbkD9OXsfigBreP9fubt6 {\n  display: none; }\n", ""]);
+exports.push([module.i, "._1A1frGOhIblVy3v1tZ8opZ {\n  background-color: #333;\n  color: #fff;\n  background-image: url(" + __webpack_require__(835) + ");\n  background-attachment: fixed;\n  position: relative; }\n  ._1A1frGOhIblVy3v1tZ8opZ:after {\n    content: '';\n    display: block;\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    left: 0;\n    top: 0;\n    z-index: 10;\n    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);\n    pointer-events: none; }\n\n@media only screen and (-webkit-min-device-pixel-ratio: 2) {\n  ._1A1frGOhIblVy3v1tZ8opZ {\n    background-image: url(" + __webpack_require__(836) + ");\n    background-size: 42px 21px; } }\n\n._24kxZ1GYT2F0KuIz74Wsjy {\n  width: 900px;\n  margin: 0 auto;\n  overflow: hidden;\n  padding: 0;\n  list-style: none; }\n\n.D3ku2fXLdMTEGzm50yNYr {\n  width: 450px;\n  float: left;\n  height: 450px;\n  border-radius: 0;\n  background-size: cover;\n  background-repeat: no-repeat;\n  position: relative;\n  cursor: pointer;\n  transition: 400ms;\n  box-shadow: inset 0 0 0 0 transparent;\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 2; }\n  .D3ku2fXLdMTEGzm50yNYr .Gy58uykNCwG7opARsi-Xp {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);\n    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);\n    font-size: 45px;\n    opacity: 0;\n    transition: 400ms;\n    color: #fff; }\n  .D3ku2fXLdMTEGzm50yNYr:hover {\n    box-shadow: inset 0 0 0 400px rgba(0, 0, 0, 0.6); }\n    .D3ku2fXLdMTEGzm50yNYr:hover .Gy58uykNCwG7opARsi-Xp {\n      opacity: 1;\n      -webkit-transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);\n      transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1); }\n\n.VOlccR6hiVhtBa09Ns8D3 {\n  vertical-align: top;\n  float: left;\n  width: 450px;\n  height: 450px;\n  position: relative;\n  background-color: rgba(255, 255, 255, 0.9);\n  color: #333;\n  box-shadow: inset 0 0 22px 8px rgba(255, 255, 255, 0.9); }\n\n._222NeqlnPNSCFkAhP05wbR {\n  font-size: 28px;\n  font-family: Microsoft Yahei; }\n\n.gx8CHDq2WE75-Nm7MudHB {\n  word-wrap: break-word;\n  white-space: pre-wrap;\n  letter-spacing: .1em; }\n\n.AbkD9OXsfigBreP9fubt6 {\n  display: none;\n  margin-left: 110px;\n  -webkit-transform: scale3d(0, 0, 0);\n  transform: scale3d(0, 0, 0);\n  width: 320px; }\n\n._2jVP4nNT2wA9N1A3Ntk5Nm {\n  position: absolute;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n  transform: translateY(-50%);\n  padding: 10px;\n  height: 100%; }\n\n._1lZDUEgp-gIki_oZPXTM69 ._2jVP4nNT2wA9N1A3Ntk5Nm {\n  height: auto; }\n\n._1lZDUEgp-gIki_oZPXTM69 .D3ku2fXLdMTEGzm50yNYr {\n  width: 100px;\n  height: 100px;\n  border-radius: 100%;\n  left: 10px; }\n  ._1lZDUEgp-gIki_oZPXTM69 .D3ku2fXLdMTEGzm50yNYr .Gy58uykNCwG7opARsi-Xp {\n    font-size: 20px; }\n\n._1lZDUEgp-gIki_oZPXTM69 .AbkD9OXsfigBreP9fubt6 {\n  display: block;\n  -webkit-transform: scale3d(1, 1, 1);\n  transform: scale3d(1, 1, 1); }\n", ""]);
 
 // exports
 exports.locals = {
@@ -19795,9 +19871,24 @@ exports.locals = {
 	"avatar": "D3ku2fXLdMTEGzm50yNYr",
 	"avatar-name": "Gy58uykNCwG7opARsi-Xp",
 	"item": "VOlccR6hiVhtBa09Ns8D3",
+	"name": "_222NeqlnPNSCFkAhP05wbR",
 	"desc": "gx8CHDq2WE75-Nm7MudHB",
-	"text": "AbkD9OXsfigBreP9fubt6"
+	"text": "AbkD9OXsfigBreP9fubt6",
+	"info": "_2jVP4nNT2wA9N1A3Ntk5Nm",
+	"thumb": "_1lZDUEgp-gIki_oZPXTM69"
 };
+
+/***/ }),
+/* 835 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "a820c8a0acb5ef66e9c224292015a03f.png";
+
+/***/ }),
+/* 836 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "ea05c14e43d95821977882c3240c1079.png";
 
 /***/ })
 ]));

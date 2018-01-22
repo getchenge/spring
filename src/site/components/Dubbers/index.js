@@ -2,31 +2,46 @@ import React, { Component } from 'react';
 import styles from './style.scss';
 
 class Dubbers extends Component {
+  constructor(props) {
+    super(props);
+  }
+  state = {
+    bigPics: []
+  }
+  togglePic = (idx, e) => {
+    const bigPics = this.state.bigPics;
+    const newPics = [];
+    newPics[idx] = !bigPics[idx];
+    this.setState({
+      bigPics: newPics
+    });
+  }
   render() {
     const { list } = this.props;
     let dubbers = '';
-
-    list && list.length > 0 && (dubbers = list.map((item) => {
+    list && list.length > 0 && (dubbers = list.map((item, idx) => {
       const avatarStyle = {
         'backgroundImage': `url(${item.avatar})`
       };
+      const mode = this.state.bigPics[idx] ? `${styles.item} ${styles.thumb}` : `${styles.item}`;
       return (
-        <li className={styles.item}>
-          <div className={styles.avatar} style={avatarStyle}>
-            <div className={styles['avatar-name']}>{item.name}</div>
-          </div>
-          {/* <img className={styles.avatar} src={item.avatar} alt="" /> */}
-          <div className={styles.text}>
-            <div className={styles.name}>{item.name}</div>
-            <pre className={styles.desc}>
-              {item.description}
-            </pre>
+        <li className={mode}>
+          <div className={styles.info}>
+            <div className={styles.avatar} onClick={this.togglePic.bind(this, idx)} style={avatarStyle}>
+              <div className={styles['avatar-name']}>{item.name}</div>
+            </div>
+            <div className={styles.text}>
+              <div className={styles.name}>{item.name}</div>
+              <pre className={styles.desc}>
+                {item.description}
+              </pre>
+            </div>
           </div>
         </li>
       );
     }));
     return (
-      <div className={styles.wraper}>
+      <div className={styles.wraper} id='dubbers'>
         <ul className={styles.list}>
           {dubbers}
         </ul>

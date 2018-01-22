@@ -29,11 +29,11 @@ var _Layout = __webpack_require__(606);
 
 var _Layout2 = _interopRequireDefault(_Layout);
 
-var _EditSectionForm = __webpack_require__(846);
+var _EditSectionForm = __webpack_require__(848);
 
 var _EditSectionForm2 = _interopRequireDefault(_EditSectionForm);
 
-var _style = __webpack_require__(849);
+var _style = __webpack_require__(851);
 
 var _style2 = _interopRequireDefault(_style);
 
@@ -18462,7 +18462,9 @@ exports.push([module.i, "/* stylelint-disable at-rule-empty-line-before,at-rule-
 /* 843 */,
 /* 844 */,
 /* 845 */,
-/* 846 */
+/* 846 */,
+/* 847 */,
+/* 848 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18534,7 +18536,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _styles = __webpack_require__(847);
+var _styles = __webpack_require__(849);
 
 var _styles2 = _interopRequireDefault(_styles);
 
@@ -18675,13 +18677,13 @@ exports.default = (0, _dva.connect)(mapStateToProps)(editSectionForm);
 module.exports = exports['default'];
 
 /***/ }),
-/* 847 */
+/* 849 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(848);
+var content = __webpack_require__(850);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -18706,7 +18708,7 @@ if(false) {
 }
 
 /***/ }),
-/* 848 */
+/* 850 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(477)(undefined);
@@ -18722,13 +18724,13 @@ exports.locals = {
 };
 
 /***/ }),
-/* 849 */
+/* 851 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(850);
+var content = __webpack_require__(852);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -18753,7 +18755,7 @@ if(false) {
 }
 
 /***/ }),
-/* 850 */
+/* 852 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(477)(undefined);

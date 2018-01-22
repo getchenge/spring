@@ -24,7 +24,7 @@ class Partner extends Component {
       );
     });
     return (
-      <div className={styles.container}>
+      <div className={styles.container} id="partner">
         <div className={styles.caption}>合作伙伴</div>
         <div className={styles.wraper}>
           <div className={styles.list}>

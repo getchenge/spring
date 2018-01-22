@@ -29,11 +29,11 @@ var _NavBar = __webpack_require__(569);
 
 var _NavBar2 = _interopRequireDefault(_NavBar);
 
-var _NewSectionForm = __webpack_require__(837);
+var _NewSectionForm = __webpack_require__(839);
 
 var _NewSectionForm2 = _interopRequireDefault(_NewSectionForm);
 
-var _style = __webpack_require__(844);
+var _style = __webpack_require__(846);
 
 var _style2 = _interopRequireDefault(_style);
 
@@ -18460,7 +18460,9 @@ exports.push([module.i, "/* stylelint-disable at-rule-empty-line-before,at-rule-
 /* 834 */,
 /* 835 */,
 /* 836 */,
-/* 837 */
+/* 837 */,
+/* 838 */,
+/* 839 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18470,11 +18472,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _row = __webpack_require__(838);
+var _row = __webpack_require__(840);
 
 var _row2 = _interopRequireDefault(_row);
 
-var _col = __webpack_require__(839);
+var _col = __webpack_require__(841);
 
 var _col2 = _interopRequireDefault(_col);
 
@@ -18526,9 +18528,9 @@ var _form = __webpack_require__(611);
 
 var _form2 = _interopRequireDefault(_form);
 
-__webpack_require__(840);
+__webpack_require__(842);
 
-__webpack_require__(841);
+__webpack_require__(843);
 
 __webpack_require__(718);
 
@@ -18546,7 +18548,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _styles = __webpack_require__(842);
+var _styles = __webpack_require__(844);
 
 var _styles2 = _interopRequireDefault(_styles);
 
@@ -18833,7 +18835,7 @@ exports.default = (0, _dva.connect)(mapStateToProps)(NewSectionForm);
 module.exports = exports['default'];
 
 /***/ }),
-/* 838 */
+/* 840 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18849,7 +18851,7 @@ exports['default'] = _grid.Row;
 module.exports = exports['default'];
 
 /***/ }),
-/* 839 */
+/* 841 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18865,35 +18867,35 @@ exports['default'] = _grid.Col;
 module.exports = exports['default'];
 
 /***/ }),
-/* 840 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(216);
-
-__webpack_require__(567);
-
-/***/ }),
-/* 841 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(216);
-
-__webpack_require__(567);
-
-/***/ }),
 /* 842 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(216);
+
+__webpack_require__(567);
+
+/***/ }),
+/* 843 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(216);
+
+__webpack_require__(567);
+
+/***/ }),
+/* 844 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(843);
+var content = __webpack_require__(845);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -18918,7 +18920,7 @@ if(false) {
 }
 
 /***/ }),
-/* 843 */
+/* 845 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(477)(undefined);
@@ -18937,13 +18939,13 @@ exports.locals = {
 };
 
 /***/ }),
-/* 844 */
+/* 846 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(845);
+var content = __webpack_require__(847);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -18968,7 +18970,7 @@ if(false) {
 }
 
 /***/ }),
-/* 845 */
+/* 847 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(477)(undefined);

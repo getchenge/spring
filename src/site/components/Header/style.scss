@@ -12,6 +12,9 @@
   margin-right: 20px;
   background: #fff;
   float: left;
+  &:hover {
+    box-shadow: inset 0 0 3px rgba(#000, .3);
+  }
 }
 
 .logoimg {

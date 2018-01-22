@@ -16,7 +16,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _dva = __webpack_require__(221);
 
-var _IndexPage = __webpack_require__(835);
+var _IndexPage = __webpack_require__(837);
 
 var _IndexPage2 = _interopRequireDefault(_IndexPage);
 
@@ -7656,13 +7656,13 @@ exports.locals = {
 
 /***/ }),
 
-/***/ 835:
+/***/ 837:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(836);
+var content = __webpack_require__(838);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -7688,7 +7688,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 836:
+/***/ 838:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(477)(undefined);
