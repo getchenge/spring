@@ -1,0 +1,37 @@
+@import '../common/style.scss';
+@import './content.scss';
+.wraper {
+  width: 88%;
+  margin: 0 auto;
+  margin-top: 125px;
+  display: flex;
+  position: relative;
+}
+
+.title {
+  @include title();
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.text {
+  font-size: 20px;
+  color: #3e3d3d;
+  position: absolute;
+  bottom: 0;
+}
+
+.left {
+  position: relative;
+  overflow: hidden;
+  width: 35%;
+  margin-right: 7%;
+}
+
+.right {
+  width: 57%;
+  max-width: 980px;
+  position: relative;
+}
+

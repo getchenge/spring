@@ -1,0 +1,17 @@
+@mixin title{
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 30px;
+  color: #3e3d3d;
+  background: #636464;
+  height: 126px;
+  text-align: center;
+}
+
+.wraper {
+  width: 88%;
+  margin: 0 auto;
+  margin-top: 125px;
+  display: flex;
+  position: relative;
+}

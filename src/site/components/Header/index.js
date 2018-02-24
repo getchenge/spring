@@ -18,7 +18,7 @@ class Header extends Component {
     to.scrollIntoView({ behavior: 'smooth' });
   }
   render() {
-    const { locaton, navs } = this.props;
+    const { location, navs } = this.props;
     const menu_nav = navs && navs.map((nav, idx) => {
       // const link = nav.target ? (<Link to={nav.link} target={nav.target}>{nav.title}</Link>) : (<Link to={nav.link}>{nav.title}</Link>);
       const link = (<div onClick={this.navigate.bind(this, nav.link)}>{nav.title}</div>);

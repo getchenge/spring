@@ -10,32 +10,19 @@ function RouterConfig({ history, app }) {
     ],
     component: () => import('./routes/IndexPage'),
   });
+  const IndexPageI = dynamic({
+    app,
+    models: () => [
+      import('../models/sections.js'),
+    ],
+    component: () => import('./routes/IndexPageI'),
+  });
 
   return (
-    <Router history={history} onUpdate={() => window.scrollTo(0, 0)} scrollBehavior={{
-      /**
-       * Sets the behaviour for scrolling when changing state.
-       * If there is a second hash in the url, scroll to the element with matching identifier.
-       * Otherwise scroll to the top.
-       * @override
-       */
-       updateScrollPosition: function updateScrollPosition() {
-        console.log('hi')
-        window.location.hash = window.decodeURIComponent(window.location.hash);
-        const hashParts = window.location.hash.split('#');
-        if (hashParts.length > 2) {
-          const hash = hashParts.slice(-1)[0];
-          const element = document.querySelector(`#${hash}`);
-          if (element) {
-            element.scrollIntoView();
-          }
-        } else {
-          window.scrollTo(0, 0);
-        }
-      }
-    }}>
+    <Router history={history}>
       <Switch>
         <Route exact path="/" component={IndexPage} />
+        <Route exact path="/v1" component={IndexPageI} />
       </Switch>
     </Router>
   );

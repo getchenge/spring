@@ -1,0 +1,48 @@
+@import '../common/style.scss';
+@import './content.scss';
+.container {
+  width: 88%;
+  margin: 0 auto;
+  margin-top: 125px;
+  position: relative;
+}
+
+.title {
+  @include title();
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.text {
+  font-size: 20px;
+  color: #3e3d3d;
+  position: absolute;
+  bottom: 0;
+}
+
+.imgwraper {
+  display: inline-block;
+  position: relative;
+}
+
+.list {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.item {
+  display: inline-block;
+  width: 500px;
+}
+
+.pd {
+  margin-right: 95px;
+}
+
+.desc {
+  color: #3e3d3d;
+  font-size: 18px;
+  line-height: 1.6em;
+  padding: 35px 0;
+}

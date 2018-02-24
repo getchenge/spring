@@ -1,0 +1,43 @@
+@import '../common/style.scss';
+@import './content.scss';
+.wraper {
+  width: 88%;
+  margin: 0 auto;
+  margin-top: 125px;
+  display: flex;
+  position: relative;
+}
+
+.title {
+  @include title();
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.text {
+  font-size: 20px;
+  color: #3e3d3d;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #777;
+  line-height: 2.6em;
+  width: 100%;
+}
+
+.item {
+  border-bottom: 1px solid #777;
+}
+
+.left {
+  position: relative;
+  overflow: hidden;
+  width: 57%;
+  margin-right: 7%;
+}
+
+.right {
+  width: 35%;
+  max-width: 980px;
+  position: relative;
+}

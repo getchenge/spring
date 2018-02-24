@@ -35,7 +35,6 @@ function IndexPage({ location, list, loading }) {
   const dubbers = getProperty(list, 'dubbers').value;
   const header = <Header location={location} navs={navs}></Header>;
   const footer = <Footer />;
-  console.info('__dubbers', dubbers);
 
   return (
     <MainLayout header={header} footer={footer} isBuilding={isBuilding}>

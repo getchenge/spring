@@ -2,48 +2,43 @@ import React, { Component } from 'react';
 import styles from './style.scss';
 import { Carousel as Slider } from 'antd';
 
-
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  const styles = Object.assign({}, style, { display: 'block', background: 'red' });
-  return (
-    <div
-      className={className}
-      style={styles}
-      onClick={onClick}
-    ></div>
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props
-  const styles = Object.assign({}, style, { display: 'block', background: 'green' });
-  return (
-    <div
-      className={className}
-      style={styles}
-      onClick={onClick}
-    ></div>
-  );
-}
-
 class Banner extends Component {
+  constructor(props) {
+    super(props);
+    this.next = this.next.bind(this);
+    this.previous = this.previous.bind(this);
+    this.state = {
+      curIndex: 0
+    };
+  }
+  next() {
+    console.info('Slider__', this.slider);
+    this.slider.innerSlider.slickNext()
+  }
+  previous() {
+    this.slider.innerSlider.slickPrev()
+  }
+  // show() {
+  //   this.slider.innerSlider.slickGoTo();
+  // }
   render() {
     const { pix, loading } = this.props;
+    console.info('pix__', pix);
     const settings = {
       dots: true,
       infinite: true,
-      speed: 500,
+      speed: 700,
+      initialSlide: this.state.curIndex,
       slidesToShow: 1,
       slidesToScroll: 1,
       adaptiveHeight: true,
-      draggable: true,
+      draggable: false,
+      fade: true,
+      dotsClass: 'dots'
       // autoplay: true,
       // autoplaySpeed: 18000,
       // arrows:true,
-      // centerMode:true,
-      // nextArrow: <SampleNextArrow />,
-      // prevArrow: <SamplePrevArrow />
+      // centerMode:true
     };
 
     const slides = pix && pix.map((pic, idx) => {
@@ -58,10 +53,12 @@ class Banner extends Component {
     });
     const loading_pane = loading ? (<div className={styles.slide}><h3>loading</h3></div>) : '';
     return (
-      <Slider {...settings}>
-        {slides}
-        {loading_pane}
-      </Slider>
+      <div className={styles.container} id="banner">
+        <Slider {...settings}>
+          {slides}
+          {loading_pane}
+        </Slider>
+      </div>
     );
   }
 }

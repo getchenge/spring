@@ -14,9 +14,39 @@
   padding: 0 1px;
 }
 
-.ant-menu-dark.ant-menu-horizontal {
+.ant-menu-dark.ant-menu-horizontal {}
 
-}
-.ant-menu-dark, .ant-menu-dark .ant-menu-sub{
+.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub {
   background: #333!important;
+}
+
+.dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+}
+
+.dots li button {
+  display: inline-block;
+  width: 64px;
+  height: 12px;
+  background: #878787;
+  margin-right: 25px;
+  transition: 400ms;
+  cursor: pointer;
+  font-size: 0;
+  border: none;
+  outline: none;
+  transition: 400ms;
+}
+
+.dots li {
+  display: inline-block;
+}
+
+.dots li.slick-active button {
+  background: #edecec;
 }

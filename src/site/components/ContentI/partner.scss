@@ -1,0 +1,18 @@
+.container {
+  width: 88%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 50px;
+}
+
+.title {
+  color: #53545e;
+  font-size: 55px;
+}
+.list{
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}

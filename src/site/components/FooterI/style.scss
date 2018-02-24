@@ -1,0 +1,46 @@
+.container {
+  padding-top: 60px;
+  background: #d9d8d8;
+}
+
+.text {
+  color: #444242;
+  font-size: 34px;
+  text-align: center;
+  line-height: 2em;
+}
+
+.list {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.content {
+  background-image: linear-gradient(to bottom, #f3f3f3, #e5e5e5);
+  height: 110px;
+  width: 110px;
+  display: inline-block;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  box-shadow: inset -1px -1px 0px #b0afaf, 1px 1px 0px rgba(0, 0, 0, .1);
+  border-radius: 20px;
+  overflow:hidden;
+}
+
+.item {
+  text-align: center;
+}
+
+.title {
+  color: #444242;
+  font-size: 28px;
+}
+
+.wechat {
+  margin-right: 170px;
+}
+
+.list{
+  padding: 40px 0;
+}

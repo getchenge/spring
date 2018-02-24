@@ -39,7 +39,7 @@ module.exports = {
         include: [path.join(__dirname, '/src/')],
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: [{ loader: 'css-loader', options: { modules: true } }, 'sass-loader', {
+          use: [{ loader: 'css-loader', options: { modules: true, localIdentName: '[local]_[hash:base64]' } }, 'sass-loader', {
             loader: 'postcss-loader',
             options: {
               ident: 'postcss',
