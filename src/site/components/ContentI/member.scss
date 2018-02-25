@@ -10,8 +10,9 @@
 .title {
   @include title();
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 60%;
+  right: 0;
+  z-index: 100;
 }
 
 .text {

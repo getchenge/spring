@@ -18,11 +18,11 @@ var _extends2 = __webpack_require__(17);
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var _queryString = __webpack_require__(748);
+var _queryString = __webpack_require__(749);
 
 var _queryString2 = _interopRequireDefault(_queryString);
 
-var _sections = __webpack_require__(750);
+var _sections = __webpack_require__(751);
 
 var sectionsService = _interopRequireWildcard(_sections);
 
@@ -198,12 +198,12 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 748:
+/***/ 749:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var strictUriEncode = __webpack_require__(749);
+var strictUriEncode = __webpack_require__(750);
 var objectAssign = __webpack_require__(5);
 
 function encoderForArrayFormat(opts) {
@@ -411,7 +411,7 @@ exports.stringify = function (obj, opts) {
 
 /***/ }),
 
-/***/ 749:
+/***/ 750:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -425,7 +425,7 @@ module.exports = function (str) {
 
 /***/ }),
 
-/***/ 750:
+/***/ 751:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -435,7 +435,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _stringify = __webpack_require__(751);
+var _stringify = __webpack_require__(752);
 
 var _stringify2 = _interopRequireDefault(_stringify);
 
@@ -444,11 +444,11 @@ exports.remove = remove;
 exports.patch = patch;
 exports.create = create;
 
-var _request = __webpack_require__(753);
+var _request = __webpack_require__(754);
 
 var _request2 = _interopRequireDefault(_request);
 
-var _constants = __webpack_require__(758);
+var _constants = __webpack_require__(759);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -479,14 +479,14 @@ function create(values) {
 
 /***/ }),
 
-/***/ 751:
+/***/ 752:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(752), __esModule: true };
+module.exports = { "default": __webpack_require__(753), __esModule: true };
 
 /***/ }),
 
-/***/ 752:
+/***/ 753:
 /***/ (function(module, exports, __webpack_require__) {
 
 var core = __webpack_require__(10);
@@ -498,7 +498,7 @@ module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
 
 /***/ }),
 
-/***/ 753:
+/***/ 754:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -516,11 +516,11 @@ var _assign = __webpack_require__(227);
 
 var _assign2 = _interopRequireDefault(_assign);
 
-var _asyncToGenerator2 = __webpack_require__(754);
+var _asyncToGenerator2 = __webpack_require__(755);
 
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
-var _fetch = __webpack_require__(755);
+var _fetch = __webpack_require__(756);
 
 var _fetch2 = _interopRequireDefault(_fetch);
 
@@ -600,7 +600,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 754:
+/***/ 755:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -645,29 +645,29 @@ exports.default = function (fn) {
 
 /***/ }),
 
-/***/ 755:
+/***/ 756:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-module.exports = __webpack_require__(756);
+module.exports = __webpack_require__(757);
 
 
 /***/ }),
 
-/***/ 756:
+/***/ 757:
 /***/ (function(module, exports, __webpack_require__) {
 
 // the whatwg-fetch polyfill installs the fetch() function
 // on the global object (window or self)
 //
 // Return that as the export for use in Webpack, Browserify etc.
-__webpack_require__(757);
+__webpack_require__(758);
 module.exports = self.fetch.bind(self);
 
 
 /***/ }),
 
-/***/ 757:
+/***/ 758:
 /***/ (function(module, exports) {
 
 (function(self) {
@@ -1135,7 +1135,7 @@ module.exports = self.fetch.bind(self);
 
 /***/ }),
 
-/***/ 758:
+/***/ 759:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

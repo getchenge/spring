@@ -12,7 +12,6 @@ class Banner extends Component {
     };
   }
   next() {
-    console.info('Slider__', this.slider);
     this.slider.innerSlider.slickNext()
   }
   previous() {

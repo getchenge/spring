@@ -1,0 +1,91 @@
+@import '../common/style.scss';
+@import './content.scss';
+.container {
+  width: 88%;
+  margin: 0 auto;
+  margin-top: 75px;
+  display: flex;
+  position: relative;
+}
+
+.left {
+  position: relative;
+  width: 27%;
+  margin-right: 7%;
+}
+
+.right {
+  width: 66%;
+  position: relative;
+}
+
+.text {
+  font-size: 20px;
+  color: #3e3d3d;
+  position: absolute;
+  bottom: 0;
+}
+
+.pane {
+  background-image: linear-gradient(to bottom, #f3f3f3, #e5e5e5);
+  display: inline-block;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  box-shadow: inset -1px -1px 0px #b0afaf, 1px 1px 0px rgba(0, 0, 0, .1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.right {
+  background: #f1f1f1;
+}
+
+.demo-title {
+  border-radius: 5px;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 30px;
+  color: #818181;
+}
+
+.input {
+  outline: none;
+  height: 70px;
+  line-height: 70px;
+  font-size: 15px;
+  color: #444242;
+  padding-left: 35px;
+}
+
+.results {
+  height: 360px;
+  box-sizing: border-box;
+  padding: 15px 35px;
+}
+
+.result {
+  font-size: 30px;
+  color: #444242;
+}
+
+.player {
+  height: 360px;
+  box-sizing: border-box;
+  background-image: url('../../../assets/audio_bg.png');
+  padding-top: 30px;
+}
+
+.control {
+  display: flex;
+  justify-content: center;
+}
+
+.audio {
+  background: #757c81;
+  width: 210px;
+  height: 210px;
+  border-radius: 100%;
+  margin: 0 auto 50px;
+}

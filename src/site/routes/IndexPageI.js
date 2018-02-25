@@ -10,6 +10,7 @@ import Classify from '../components/contentI/Classify';
 import Founder from '../components/contentI/Founder';
 import Members from '../components/contentI/Members';
 import Partner from '../components/contentI/Partner';
+import Demo from '../components/contentI/Demo';
 // import Footer from '../components/Footer';
 // import Brief from '../components/Content/Brief.js';
 // import Studio from '../components/Content/Studio.js';
@@ -36,7 +37,7 @@ class IndexPage extends Component {
     const navs = getProperty(list, 'navigation').value;
     const pix = getProperty(list, 'slider').value;
     const header = <Header location={location} navs={navs} />;
-    const sections = [header, (<Banner pix={pix} loading={loading} />), <News loading={loading} />, <Classify />, <Founder />, <Members />, <Partner />, <FooterI />];
+    const sections = [header, (<Banner pix={pix} loading={loading} />), <News loading={loading} />, <Classify />, <Founder />, <Members />, <Demo />, <Partner />, <FooterI />];
     return (
       <MainLayout sections={sections}>
       </MainLayout>

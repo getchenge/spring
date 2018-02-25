@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './founder.scss';
-import { Carousel as Slider, Icon } from 'antd';
+import { Icon } from 'antd';
 
 class Founder extends Component {
   render() {
