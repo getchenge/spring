@@ -37,7 +37,7 @@ class IndexPage extends Component {
     const navs = getProperty(list, 'navigation').value;
     const pix = getProperty(list, 'slider').value;
     const header = <Header location={location} navs={navs} />;
-    const sections = [header, (<Banner pix={pix} loading={loading} />), <News loading={loading} />, <Classify />, <Founder />, <Members />, <Demo />, <Partner />, <FooterI />];
+    const sections = [header, (<Banner pix={pix} loading={loading} />), <News loading={loading} />, <Founder />, <Members />, <Demo />, <Partner />, <FooterI />];
     return (
       <MainLayout sections={sections}>
       </MainLayout>

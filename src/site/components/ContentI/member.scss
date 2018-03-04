@@ -25,6 +25,7 @@
 .imgwraper {
   display: inline-block;
   position: relative;
+  overflow: hidden;
 }
 
 .list {
@@ -35,6 +36,7 @@
 .item {
   display: inline-block;
   width: 500px;
+  overflow: hidden;
 }
 
 .pd {

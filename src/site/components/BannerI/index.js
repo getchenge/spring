@@ -45,7 +45,7 @@ class Banner extends Component {
         background: `url(${pic.src})`
       }
       return (
-        <div className={styles.slide} key={idx}>
+        <div className={`${styles.slide} ${styles.mask}`} key={idx}>
           <img className={styles.img} src={pic.src} />
         </div>
       );

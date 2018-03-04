@@ -9,7 +9,8 @@ router.get('/api/sections', (ctx, next) => {
   });
 });
 router.post('/api/sections', (ctx, next) => {
-  const section = ctx.request.body;
+  console.info('post/api/section__', ctx.request.body);
+  const { section } = ctx.request.body;
   const { caption, name, isList, fields } = section;
   const new_section = Object.assign({}, { caption, name, isList, fields: [] });
   fields.length > 0 && fields.map((i) => {
@@ -28,10 +29,18 @@ router.post('/api/sections', (ctx, next) => {
   });
 });
 router.patch('/api/section', (ctx, next) => {
-  const section = ctx.request.body.section;
-  return Section.findOneAndUpdate({ name: section.name }, { $set: { value: section.value } }).then(section => {
+  const { section } = ctx.request.body;
+  console.info('section__', ctx.request.body, section);
+  return Section.findOneAndUpdate({ name: section.name }, { $set: section }).then(section => {
     return ctx.body = {};
   });
+});
+router.delete('/api/section', (ctx, next) => {
+  const section = ctx.request.body;
+  return Section.remove({ _id: section.id }).then(() => {
+    return ctx.body = {};
+  })
+  console.info('delete__', section);
 });
 router.get('/dashboard/*', (ctx, next) => {
   return ctx.render('dashboard');

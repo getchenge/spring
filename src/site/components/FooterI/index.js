@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './style.scss';
 import qrcode from '../../../assets/wechat.jpg';
+import weibo from '../../../assets/weibo.png';
 
 class Partner extends Component {
   render() {
@@ -13,13 +14,13 @@ class Partner extends Component {
         </div>
         <div className={styles.list}>
           <div className={`${styles.item} ${styles.wechat}`}>
-            <div className={styles.content}><img src={qrcode} alt=""/></div>
+            <div className={styles.content}><img src={qrcode} alt="微信公众号二维码" /></div>
             <div className={styles.title}>微信公众号</div>
           </div>
-          <div className={styles.item}>
-            <div className={styles.content}></div>
+          <a className={styles.item} href='https://weibo.com/springmedia' targe='_blank'>
+            <div className={styles.content}><img src={weibo} alt="微博二维码" /></div>
             <div className={styles.title}>官方微博</div>
-          </div>
+          </a>
         </div>
       </div>
     );

@@ -18,17 +18,18 @@ class Header extends Component {
       const banner = document.querySelector('#banner');
       if (scrolltop > banner.offsetHeight - header.offsetHeight) {
         me.setState({
-          headerStyle:`${styles.container} ${styles.dark}`
+          headerStyle: `${styles.container} ${styles.dark}`
         });
-      }else{
+      } else {
         me.setState({
-          headerStyle:`${styles.container}`
+          headerStyle: `${styles.container}`
         });
       }
     })
   }
   render() {
     const { location, navs } = this.props;
+    console.info('location__', location);
     let items = Object.assign([], navs);
     const headerStyle = this.state.headerStyle;
     if (navs) {
@@ -36,9 +37,25 @@ class Header extends Component {
     }
     const Navs = items.map((nav, idx) => {
       if (nav === 'logo') {
-        return <a href='/' className={styles.logo}></a>
+        return <a href='/' className={styles.logo} key={idx}></a>
       }
-      return (<a href={nav.link} className={styles.item} key={idx}><span>{nav.title}</span></a>);
+      const item_class = location.pathname === nav.link ? `${styles.item} ${styles.cur}` : styles.item;
+      const subitem_class = `${location.pathname}${location.search}${location.hash}` === 'sublink' ? `${styles.subitem} ${styles.cur}` : styles.subitem;
+      return (
+        <div className={item_class} key={idx}>
+          <a href={nav.link} className={styles.link} key={idx}><span>{nav.title}</span></a>
+          <div className={styles.subnavs_wraper}>
+            <div className={styles.subnavs}>
+              <div className={subitem_class}>
+                <a href={nav.link} className={styles.link} key={idx}><span>{nav.title}</span></a>
+              </div>
+              <div className={styles.subitem}>
+                <a href={nav.link} className={styles.link} key={idx}><span>{nav.title}</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
     });
     return (
       <div className={`${styles.wraper}`} id='header'>

@@ -60,6 +60,7 @@ class editSectionForm extends Component {
             initialValue: item && item[field.name] || ''
           })(<Input name={field.name} placeholder={field.placeholder} />);
           break;
+        case 'Object':
         case 'Paragraph':
           tag = getFieldDecorator(`${field.name}`, {
             rules: [{ message: `请输入${field.caption}` }],

@@ -51,12 +51,16 @@
 }
 
 .input {
-  outline: none;
   height: 70px;
   line-height: 70px;
   font-size: 15px;
   color: #444242;
   padding-left: 35px;
+  &:focus,
+  &:hover {
+    border-color: transparent;
+    box-shadow: none;
+  }
 }
 
 .results {

@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import { Form, Select, Icon, Input, Button, Row, Col, Cascader, InputNumber } from 'antd';
-import styles from './style.scss';
+import styles from '../NewSectionForm/style.scss';
 import { connect } from 'dva';
-import { message } from 'antd';
+import { message, Modal } from 'antd';
 
 const FormItem = Form.Item;
 const Option = Select.Option;
 
 let uuid = 0;
 
-class NewSectionForm extends Component {
+class EditSectionSchema extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      visible: false
+    };
+  }
   componentDidMount() {
     // this.props.form.validateFields(); //validate at begining
   }
@@ -41,17 +47,63 @@ class NewSectionForm extends Component {
         console.log('Received values of form: ', values);
       }
     });
-    const dispatch = this.props.dispatch;
+    const { dispatch, section } = this.props;
     const values = this.props.form.getFieldsValue();
+    let type = 'sections/create';
+    let msg = '创建成功';
+    if (section) {
+      type = 'sections/patch';
+      msg = '保存成功';
+    }
+    const { caption, name, isList, fields } = values;
+    const new_section = Object.assign(section, { caption, name, isList, fields: [] });
+    fields.length > 0 && fields.map((i) => {
+      const field = {
+        caption: values[`caption-${i}`],
+        name: values[`name-${i}`],
+        type: values[`type-${i}`],
+        placeholder: values[`placeholder-${i}`],
+        value: ''
+      };
+      Object.assign(field, section.fields[i], field);
+      new_section.fields.push(field);
+    });
     dispatch({
-      type: 'sections/create',
-      payload: { section: values },
+      type,
+      payload: { section: new_section },
     }).then(() => {
-      message.success('创建成功');
+      message.success(msg);
       this.props.history.push(`/dashboard/`);
     });
   }
+  handleCancel = (e) => {
+    this.setState({
+      visible: false
+    });
+  }
+  showModal = (e) => {
+    this.setState({
+      visible: true
+    });
+  }
+  removeSection = (e) => {
+    const { section, dispatch } = this.props;
+    dispatch({
+      type: 'sections/remove',
+      payload: { id: section._id },
+    }).then(() => {
+      message.success('删除成功');
+      this.props.history.push(`/dashboard/`);
+    });
+  }
+
   render() {
+    const { section, index } = this.props;
+    if (!section) {
+      return (<div>loading</div>);
+    }
+    console.info('schema_section__', section);
+    const fieldList = section && section.fields;
     const { getFieldDecorator, getFieldValue, getFieldsError, getFieldError, isFieldTouched } = this.props.form;
     const formItemLayout = {
       labelCol: {
@@ -72,9 +124,15 @@ class NewSectionForm extends Component {
     const submitLayout = {
       wrapperCol: { span: 14, offset: 6 },
     };
-    getFieldDecorator('fields', { initialValue: [0] });
+    const initial_fields = fieldList.map((v, idx) => {
+      return idx;
+    });
+    uuid = fieldList.length || 0;
+    console.info('initial_fields~~', initial_fields);
+    getFieldDecorator('fields', { initialValue: initial_fields || [0] });
     const fields = getFieldValue('fields');
     const fieldsItem = fields.map((field, index) => {
+      const item = fieldList && fieldList[index] || {};
       return (
         <div className={styles.card} key={field}>
           <FormItem
@@ -83,6 +141,7 @@ class NewSectionForm extends Component {
             hasFeedback
           >
             {getFieldDecorator(`caption-${field}`, {
+              initialValue: item.caption || '',
               rules: [{ required: true, message: '请输入属性名称' }]
             })(<Input />)}
           </FormItem>
@@ -92,6 +151,7 @@ class NewSectionForm extends Component {
             hasFeedback
           >
             {getFieldDecorator(`name-${field}`, {
+              initialValue: item.name || '',
               rules: [{ required: true, message: '属性key' }]
             })(<Input placeholder="英文" />)}
           </FormItem>
@@ -101,6 +161,7 @@ class NewSectionForm extends Component {
             hasFeedback
           >
             {getFieldDecorator(`placeholder-${field}`, {
+              initialValue: item.placeholder || '',
               rules: [{ message: '请输入属性名称' }]
             })(<Input />)}
           </FormItem>
@@ -108,7 +169,7 @@ class NewSectionForm extends Component {
             {...formItemLayout}
             label="属性类型"
           >
-            {getFieldDecorator(`type-${field}`, { initialValue: 'String' })(
+            {getFieldDecorator(`type-${index}`, { initialValue: item.type || 'String' })(
               <Select>
                 <Option value="String">字符串</Option>
                 <Option value="Select">选项</Option>
@@ -122,12 +183,31 @@ class NewSectionForm extends Component {
               className={styles['dynamic-delete-button']}
               type="minus-circle-o"
               disabled={fields.length === 1}
-              onClick={() => this.remove(field)}
+              onClick={() => this.remove(index)}
             />
           ) : null}
         </div>
       );
     });
+    let removeBtn, removeModal;
+    if (section) {
+      removeBtn = (
+        <Button className={styles.submit} type="danger" onClick={this.showModal}>删除</Button>
+      );
+      removeModal = (
+        <Modal
+          title="删除确认"
+          cancelText="取消"
+          okText="确定"
+          okType="danger"
+          visible={this.state.visible}
+          onOk={this.removeSection}
+          onCancel={this.handleCancel}
+        >
+          <p>确定删除该模块吗？</p>
+        </Modal>
+      );
+    }
     return (
       <Form onSubmit={this.handleSubmit}>
         <FormItem
@@ -136,7 +216,8 @@ class NewSectionForm extends Component {
           hasFeedback
         >
           {getFieldDecorator('caption', {
-            rules: [{ required: true, message: '请输入模块名称' }],
+            initialValue: section.caption || '',
+            rules: [{ required: true, message: '请输入模块名称' }]
           })(
             <Input />
           )}
@@ -147,6 +228,7 @@ class NewSectionForm extends Component {
           hasFeedback
         >
           {getFieldDecorator('name', {
+            initialValue: section.name || '',
             rules: [{ required: true, message: '请输入模块key' }, { pattern: /[a-zA-Z]/, message: '请输入英文' }],
           })(
             <Input />
@@ -164,7 +246,7 @@ class NewSectionForm extends Component {
           label="是否是列表"
         >
           {getFieldDecorator('isList', {
-            initialValue: 'no',
+            initialValue: section.isList ? 'yes' : 'no'
           })(
             <Select>
               <Option value="no">否</Option>
@@ -184,7 +266,9 @@ class NewSectionForm extends Component {
           </Col>
         </Row>
         <FormItem {...submitLayout}>
-          <Button className={styles.submit} type="primary" htmlType="submit">添加</Button>
+          <Button className={styles.submit} type="primary" htmlType="submit">{section ? '保存' : '添加'}</Button>
+          {removeBtn}
+          {removeModal}
         </FormItem>
       </Form>
     );
@@ -202,4 +286,4 @@ function mapStateToProps(state) {
 }
 
 // export default NewSectionForm;
-export default connect(mapStateToProps)(NewSectionForm);
+export default connect(mapStateToProps)(EditSectionSchema);

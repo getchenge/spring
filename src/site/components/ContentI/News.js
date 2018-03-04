@@ -38,8 +38,7 @@ class News extends Component {
         <div className={styles.left}>
           <div className={styles.text}>这里就输入一些公司最新的情况，<br />字数不用太多，简明扼要就好，稍微注意一下上下行字数排列，要错落开。</div>
         </div>
-        {/* <div className={styles.slides}> */}
-        <div className={`${styles.right} ${styles.mask}`} >
+        <div className={`${styles.right} ${styles.mask}`}>
           <Slider {...settings}>
             {slides}
             {loading_pane}

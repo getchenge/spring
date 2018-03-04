@@ -35,6 +35,7 @@ export default {
       yield put({ type: 'reload' });
     },
     *create({ payload: values }, { call, put }) {
+      console.info('*create_put', values);
       yield call(sectionsService.create, values);
       yield put({ type: 'reload' });
     },

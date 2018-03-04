@@ -6,13 +6,13 @@ export function fetch() {
 }
 
 export function remove(id) {
-  return request(`/api/users/${id}`, {
+  return request(`/api/section`, {
     method: 'DELETE',
+    body: JSON.stringify(id)
   });
 }
 
 export function patch(values) {
-  // console.info('patch', values);
   return request(`/api/section`, {
     method: 'PATCH',
     body: JSON.stringify(values),

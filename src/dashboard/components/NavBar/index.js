@@ -13,6 +13,7 @@ class NavBar extends Component {
     const menu_nav = list && list.map((nav) => {
       const link = `/dashboard/${nav.name}`;
       const newLink = `/dashboard/${nav.name}?index=new`;
+      const editLink = `/dashboard/${nav.name}?index=edit`;
       if (nav.value && nav.value.length > 0) {
         const subItems = nav.value.map((item, idx) => {
           const link = `/dashboard/${nav.name}?index=${idx}`;
@@ -26,15 +27,23 @@ class NavBar extends Component {
           <SubMenu className={styles.item} title={nav.caption} key={nav.name}>
             {subItems}
             <Item className={styles.item} key={newLink}>
-              <Link className={`${styles.a} ${styles['sub-item']}`} to={newLink}>+</Link>
+              <Link className={`${styles.a} ${styles['sub-item']}`} to={newLink}><Icon type='plus-square-o' /></Link>
+            </Item>
+            <Item className={styles.item} key={editLink}>
+              <Link className={`${styles.a} ${styles['sub-item']}`} to={editLink}><Icon type='edit' /></Link>
             </Item>
           </SubMenu>
         );
       }
       return (
-        <Item className={styles.item} key={link}>
-          <Link className={styles.a} to={link}>{nav.caption}</Link>
-        </Item>
+        <SubMenu className={styles.item} title={nav.caption} key={nav.name}>
+          <Item className={styles.item} key={newLink}>
+            <Link className={`${styles.a} ${styles['sub-item']}`} to={newLink}><Icon type='plus-square-o' /></Link>
+          </Item>
+          <Item className={styles.item} key={editLink}>
+            <Link className={`${styles.a} ${styles['sub-item']}`} to={editLink}><Icon type='edit' /></Link>
+          </Item>
+        </SubMenu>
       );
     });
     return (
@@ -49,7 +58,7 @@ class NavBar extends Component {
         </div>
         {menu_nav}
         <Item className={styles.item} key="/dashboard/add">
-          <Link className={styles.aplus} to="/dashboard/add">+</Link>
+          <Link className={styles.aplus} to="/dashboard/add"><Icon type='plus' /></Link>
         </Item>
       </Menu>
     );

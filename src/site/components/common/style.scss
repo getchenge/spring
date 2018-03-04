@@ -1,4 +1,4 @@
-.mask {
+/*.mask {
   &:before {
     pointer-events: none;
     content: '';
@@ -14,6 +14,14 @@
   }
   &:hover::before {
     background: rgba(#444, .0);
+  }
+}*/
+
+.mask img {
+  transition: 1000ms ease-in-out;
+  &:hover {
+    transform: perspective(1000px) translate3d(0px, 0px, 100px);
+    transition: 5000ms ease-out;
   }
 }
 

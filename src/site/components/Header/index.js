@@ -20,7 +20,6 @@ class Header extends Component {
   render() {
     const { location, navs } = this.props;
     const menu_nav = navs && navs.map((nav, idx) => {
-      // const link = nav.target ? (<Link to={nav.link} target={nav.target}>{nav.title}</Link>) : (<Link to={nav.link}>{nav.title}</Link>);
       const link = (<div onClick={this.navigate.bind(this, nav.link)}>{nav.title}</div>);
       return (
         <Menu.Item key={idx}>
